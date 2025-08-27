@@ -65,8 +65,8 @@ advancement_table = {
     "Tablet Puzzle Clue [Stone Dungeon A3]":        AdvData(102677, "Stony Cliffs Post-Rune"),
     "Tablet Puzzle Clue [Stone Dungeon E1]":        AdvData(125406, "Stony Cliffs"),
 
-    "Big Bell Stone [Beast A1]":                    AdvData(123559, "Beast Bridge"),
-    "Big Bell Stone [Sanctum B1]":                  AdvData(123976, "Sanctum Peak"),
+    "Bellstone [Beast A1]":                         AdvData(123559, "Beast Bridge"),
+    "Bellstone [Sanctum B1]":                       AdvData(123976, "Sanctum Peak"),
 
     #
 
