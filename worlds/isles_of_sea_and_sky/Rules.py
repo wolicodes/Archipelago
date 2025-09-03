@@ -1445,8 +1445,9 @@ def set_raging_volcano(self):
 
 
         set_rule(multiworld.get_location("Snakeblock [Fire D1 - SE]", player),
-                 lambda state: state.has("Salamander Shirt", player)
-                               and state.has("Ancient Key", player, 38))
+                 lambda state: state.has("Salamander Shirt", player))
+        set_rule(multiworld.get_location("Snakeblock [Fire D1 - SW]", player),
+                 lambda state: state.has("Ancient Key", player, 38))
         set_rule(multiworld.get_location("Snakeblock [Fire B1]", player),
                  lambda state: state.has("Salamander Shirt", player))
         set_rule(multiworld.get_location("Snakeblock [Fire D4 - E]", player),
