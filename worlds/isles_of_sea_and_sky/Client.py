@@ -41,9 +41,29 @@ class IslesOfSeaAndSkyCommandProcessor(ClientCommandProcessor):
             self.ctx.save_game_folder = directory
             self.output("Changed to the following directory: " + self.ctx.save_game_folder)
 
+    def _cmd_launch(self):
+        """Launch the modded game if you are connected to the server"""
+        if isinstance(self.ctx, IslesOfSeaAndSkyContext):
+            if self.ctx.slot is not None:
+                exe_path = os.path.join(Utils.user_path("IslesOfSeaAndSky"), "IslesOfSeaAndSky.exe")
+                patched_path = os.path.join(Utils.user_path("IslesOfSeaAndSky"), "data.win")
+
+                self.output("Starting game...")
+                try:
+                    subprocess.Popen([exe_path, "-game", patched_path])
+                except Exception as e:
+                    self.output("Launch FAILED:")
+                    self.output("Cannot find path to modded exe... Did you patch the game?")
+                    #self.output(str(e))
+                return
+
+            self.output("Launch FAILED:")
+            self.output("Client is not connected to the server.")
+
+
     @mark_raw
     def _cmd_auto_patch(self, steaminstall: typing.Optional[str] = None):
-        """Patch the game automatically."""
+        """Patch the game automatically, and then launch it"""
 
         if isinstance(self.ctx, IslesOfSeaAndSkyContext):
             os.makedirs(name=Utils.user_path("IslesOfSeaAndSky"), exist_ok=True)
@@ -68,12 +88,17 @@ class IslesOfSeaAndSkyCommandProcessor(ClientCommandProcessor):
                                Utils.user_path("IslesOfSeaAndSky", file_name))
                 self.ctx.patch_game()
                 self.output("New IslesOfSeaAndSky install is now located in Archipelago Directory.")
-                self.output("Opening game...")
 
-                exe_path = os.path.join(Utils.user_path("IslesOfSeaAndSky"), "IslesOfSeaAndSky.exe")
-                patched_path = os.path.join(Utils.user_path("IslesOfSeaAndSky"), "data.win")
+                if self.ctx.slot is not None:
+                    exe_path = os.path.join(Utils.user_path("IslesOfSeaAndSky"), "IslesOfSeaAndSky.exe")
+                    patched_path = os.path.join(Utils.user_path("IslesOfSeaAndSky"), "data.win")
 
-                subprocess.Popen([exe_path, "-game", patched_path])
+                    self.output("Starting game...")
+                    subprocess.Popen([exe_path, "-game", patched_path])
+
+                    return
+
+                self.output("Launch FAILED: Client is not connected to the server.")
 
 
     @mark_raw
@@ -170,6 +195,9 @@ class IslesOfSeaAndSkyContext(CommonContext):
         self.save_game_folder = os.path.expandvars(r"%localappdata%/IslesOfSeaAndSky")
         self.iosas_json_text_parser = IslesOfSeaAndSkyJSONtoTextParser(self)
         self.did_scout_locations = False
+
+    def launch_game(self):
+        pass
 
     def patch_game(self):
 

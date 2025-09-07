@@ -33,8 +33,8 @@ advancement_table = {
     "Ruby Shard Hit [Sanctum C0]":                  AdvData(99907201, "Sanctum"),
     "Diamond Shard Hit [Sanctum A0]":               AdvData(99907001, "Sanctum"),
 
-    "Blue Stone Tablet [Stone E3]":                 AdvData(138731, "Stony Cliffs Post-Rune"),
-    "Gold Stone Tablet [Stone Dungeon A1]":         AdvData(134405, "Stony Cliffs Post-Rune"),
+    #"Blue Stone Tablet [Stone E3]":                 AdvData(134550, "Stony Cliffs Post-Rune"),
+    #"Gold Stone Tablet [Stone Dungeon A1]":         AdvData(134223, "Stony Cliffs Post-Rune"),
 
     "Fire Key [Fire A4]":                           AdvData(117766, "Raging Volcano Post-Rune"),
     "Fire Key [Fire A0]":                           AdvData(116592, "Raging Volcano Post-Rune"),
@@ -281,7 +281,7 @@ advancement_table = {
     "Star Piece [Wind C3 - W]":                     AdvData(120638, "Frozen Spire"), # d rune
     "Star Piece [Wind C3 - NE]":                    AdvData(120631, "Frozen Spire"), # d rune
     "Star Piece [Wind B3]":                         AdvData(121097, "Frozen Spire Post-Rune"), # k cloak
-    "Star Piece [Wind A3]":                         AdvData(120833, "Frozen Spire Post-Rune"), # k cloak
+    "Star Piece [Wind A3]":                         AdvData(120833, "Frozen Spire"), # k cloak
     "Star Piece [Wind B2 - N]":                     AdvData(120998, "Frozen Spire Post-Rune"), # k cloak?
     "Star Piece [Wind C2]":                         AdvData(121360, "Frozen Spire"), # d quest
     "Star Piece [Wind D2]":                         AdvData(121525, "Frozen Spire Post-Rune"), # k cloak
@@ -677,13 +677,13 @@ snakesanity_table = {
     "Snakeblock [Water C1 - CE]":                   AdvData(109443, "Tidal Reef"),
     "Snakeblock [Water C2 - NE]":                   AdvData(108780, "Tidal Reef"),
     "Snakeblock [Water C2 - CE]":                   AdvData(108778, "Tidal Reef"),
-    "Snakeblock [Water B2 - SE]":                   AdvData(109697, "Tidal Reef"),
-    "Snakeblock [Water B2 - NE]":                   AdvData(109695, "Tidal Reef"),
+    "Snakeblock [Water B1 - SE]":                   AdvData(109697, "Tidal Reef"),
+    "Snakeblock [Water B1 - NE]":                   AdvData(109695, "Tidal Reef"),
     "Snakeblock [Water C1 - W]":                    AdvData(109441, "Tidal Reef"),
     "Snakeblock [Water C1 - CW]":                   AdvData(109442, "Tidal Reef"),
     "Snakeblock [Water B0 - E]":                    AdvData(113766, "Tidal Reef"), # s quest
     "Snakeblock [Water B0 - C]":                    AdvData(113757, "Tidal Reef"), # s quest, f flippers
-    "Snakeblock [Water B2 - E]":                    AdvData(108963, "Tidal Reef"), # s quest,
+    "Snakeblock [Water B2 - NE]":                   AdvData(108963, "Tidal Reef"), # s quest,
     "Snakeblock [Water B2 - C]":                    AdvData(108968, "Tidal Reef"), # s quest,
     "Snakeblock [Water B3]":                        AdvData(110853, "Tidal Reef"),
     "Snakeblock [Water D0 - W]":                    AdvData(110313, "Tidal Reef"),

@@ -948,14 +948,14 @@ def set_stony_cliffs(self):
     player = self.player
     multiworld = self.multiworld
 
-    set_rule(multiworld.get_location("Gold Stone Tablet [Stone Dungeon A1]", player),
-             lambda state: state.has("Topaz Rune Stone", player)
-                         and state.has("Star Piece", player, 20)
-                         and state.has("Awaken Earth Elementals", player))
+    #set_rule(multiworld.get_location("Gold Stone Tablet [Stone Dungeon A1]", player),
+    #         lambda state: state.has("Topaz Rune Stone", player)
+    #                     and state.has("Star Piece", player, 20)
+    #                     and state.has("Awaken Earth Elementals", player))
 
-    set_rule(multiworld.get_location("Blue Stone Tablet [Stone E3]", player),
-             lambda state: state.has("Topaz Rune Stone", player)
-                           and state.has("Star Piece", player, 20))
+    #set_rule(multiworld.get_location("Blue Stone Tablet [Stone E3]", player),
+    #         lambda state: state.has("Topaz Rune Stone", player)
+    #                       and state.has("Star Piece", player, 20))
 
     set_rule(multiworld.get_location("Ancient Key [Stone C0]", player),
              lambda state: state.has("Awaken Earth Elementals", player))
@@ -1190,9 +1190,6 @@ def set_tidal_reef(self):
     set_rule(multiworld.get_location("Sapphire [Water A1]", player),
              lambda state: state.has("Frog Flippers", player))
 
-    set_rule(multiworld.get_location("Obsidian [Water D0]", player),
-             lambda state: state.has("Frog Flippers", player))
-
     set_rule(multiworld.get_location("Star Piece [Water C0]", player),
              lambda state: state.has("Awaken Water Elementals", player))
 
@@ -1289,9 +1286,9 @@ def set_tidal_reef(self):
                  lambda state: state.has("Awaken Water Elementals", player))
         set_rule(multiworld.get_location("Snakeblock [Water B0 - C]", player),
                  lambda state: state.has("Awaken Water Elementals", player))
-        set_rule(multiworld.get_location("Snakeblock [Water B2 - E]", player),
+        set_rule(multiworld.get_location("Snakeblock [Water B1 - NE]", player),
                  lambda state: state.has("Awaken Water Elementals", player))
-        set_rule(multiworld.get_location("Snakeblock [Water B2 - C]", player),
+        set_rule(multiworld.get_location("Snakeblock [Water B1 - SE]", player),
                  lambda state: state.has("Awaken Water Elementals", player))
 
 
@@ -1299,6 +1296,8 @@ def set_tidal_reef(self):
                  lambda state: state.has("Frog Flippers", player))
         set_rule(multiworld.get_location("Snakeblock [Water D2 - E]", player),
                  lambda state: state.has("Frog Flippers", player))
+        set_rule(multiworld.get_location("Snakeblock [Water D3]", player),
+                 lambda state: state.has("Awaken Water Elementals", player))
         set_rule(multiworld.get_location("Snakeblock [Water E1 - W]", player),
                  lambda state: state.has("Frog Flippers", player))
         set_rule(multiworld.get_location("Snakeblock [Water E1 - E]", player),
@@ -1396,7 +1395,7 @@ def set_raging_volcano(self):
              lambda state: state.has("Awaken Fire Elementals", player) and state.has("Salamander Shirt", player) )
 
     set_rule(multiworld.get_location("Star Piece [Fire E1 - W]", player),
-             lambda state: state.has("Salamander Shirt", player))
+             lambda state: state.has("Awaken Fire Elementals", player) and state.has("Salamander Shirt", player))
 
     set_rule(multiworld.get_location("Star Piece [Fire E0]", player),
              lambda state: state.has("Salamander Shirt", player) )
@@ -1488,11 +1487,14 @@ def set_frozen_spire(self):
     set_rule(multiworld.get_location("Ancient Key [Wind D4 - NW3]", player),
              lambda state: state.has("Awaken Wind Elementals", player))
 
+    set_rule(multiworld.get_location("Star Piece [Wind D4]", player),
+             lambda state: state.has("Ancient Key", player, 45))
+
     set_rule(multiworld.get_location("Ancient Key [Wind D3]", player),
              lambda state: state.has("Kite Cloak", player))
 
     set_rule(multiworld.get_location("Ancient Key [Wind A3]", player),
-             lambda state: state.has("Kite Cloak", player))
+             lambda state: state.has("Kite Cloak", player) or state.has("Awaken Wind Elementals", player))
 
     set_rule(multiworld.get_location("Ancient Key [Wind C2]", player),
              lambda state: state.has("Awaken Wind Elementals", player))
@@ -1599,6 +1601,9 @@ def set_frozen_spire(self):
         set_rule(multiworld.get_location("Snakeblock [Wind E1]", player),
                  lambda state: state.has("Gopher Gloves", player)
                                and state.has("Kite Cloak", player))
+
+        set_rule(multiworld.get_location("Snakeblock [Wind D4]", player),
+                 lambda state: state.has("Ancient Key", player, 45))
 
     # Secretsanity
     if self.options.secretsanity.value:
