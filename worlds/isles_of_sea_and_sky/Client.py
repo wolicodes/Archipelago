@@ -387,20 +387,12 @@ async def process_isles_of_sea_and_sky_cmd(ctx: IslesOfSeaAndSkyContext, cmd: st
             await ctx.send_msgs(sync_msg)
 
         if start_index == len(ctx.items_received):
-            counter = -1
-            for item in args['items']:
-                item_id = NetworkItem(*item).location
-                while NetworkItem(*item).location < 0 and counter <= item_id:
-                    item_id -= 1
-                if NetworkItem(*item).location < 0:
-                    counter -= 1
-                    item_id = int(str(item_id) +  str(NetworkItem(*item).item.real))
-                filename = f"{str(item_id)}PLR{str(NetworkItem(*item).player)}.item"
-                with open(os.path.join(ctx.save_game_folder + "/AP/IN", filename), "w") as f:
-                    f.write(str(NetworkItem(*item).item))
-                    f.close()
-
-                ctx.items_received.append(NetworkItem(*item))
+            filename = f"received.items"
+            with open(os.path.join(ctx.save_game_folder + "/AP/IN", filename), "w") as f:
+                for item in args['items']:
+                    f.write(str(NetworkItem(*item).item) + "\n")
+                    ctx.items_received.append(NetworkItem(*item))
+                f.close()
 
         ctx.watcher_event.set()
 
