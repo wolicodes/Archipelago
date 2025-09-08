@@ -678,7 +678,7 @@ snakesanity_table = {
     "Snakeblock [Water C2 - NE]":                   AdvData(108780, "Tidal Reef"),
     "Snakeblock [Water C2 - CE]":                   AdvData(108778, "Tidal Reef"),
     "Snakeblock [Water B1 - SE]":                   AdvData(109697, "Tidal Reef"),
-    "Snakeblock [Water B1 - NE]":                   AdvData(109695, "Tidal Reef"),
+    "Snakeblock [Water B1 - C]":                    AdvData(109695, "Tidal Reef"),
     "Snakeblock [Water C1 - W]":                    AdvData(109441, "Tidal Reef"),
     "Snakeblock [Water C1 - CW]":                   AdvData(109442, "Tidal Reef"),
     "Snakeblock [Water B0 - E]":                    AdvData(113766, "Tidal Reef"), # s quest

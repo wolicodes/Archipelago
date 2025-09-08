@@ -1286,7 +1286,7 @@ def set_tidal_reef(self):
                  lambda state: state.has("Awaken Water Elementals", player))
         set_rule(multiworld.get_location("Snakeblock [Water B0 - C]", player),
                  lambda state: state.has("Awaken Water Elementals", player))
-        set_rule(multiworld.get_location("Snakeblock [Water B1 - NE]", player),
+        set_rule(multiworld.get_location("Snakeblock [Water B1 - C]", player),
                  lambda state: state.has("Awaken Water Elementals", player))
         set_rule(multiworld.get_location("Snakeblock [Water B1 - SE]", player),
                  lambda state: state.has("Awaken Water Elementals", player))
