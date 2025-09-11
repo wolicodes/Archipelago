@@ -86,8 +86,13 @@ class IslesOfSeaAndSkyCommandProcessor(ClientCommandProcessor):
                     if file_name != "steam_api64.dll" and file_name != "Steamworks_x64.dll":
                         shutil.copy(os.path.join(tempInstall, file_name),
                                Utils.user_path("IslesOfSeaAndSky", file_name))
-                self.ctx.patch_game()
+                game_patched: bool = self.ctx.patch_game()
+
+                if not game_patched:
+                    return
+
                 self.output("New IslesOfSeaAndSky install is now located in Archipelago Directory.")
+
 
                 if self.ctx.slot is not None:
                     exe_path = os.path.join(Utils.user_path("IslesOfSeaAndSky"), "IslesOfSeaAndSky.exe")
@@ -207,13 +212,13 @@ class IslesOfSeaAndSkyContext(CommonContext):
             data_file = IslesOfSeaAndSkyWorld.settings.data_file
             data_file.validate(data_file)
         except FileNotFoundError:
-            logger.info("Patch cancelled")
+            logger.info("Cannot find correctly file(s). Patch cancelled")
             # TODO: consider clearing the path since the one we were given is invalid
-            return
+            return False
         except ValueError:
-            logger.info("Selected game is not vanilla, please reset the game and repatch")
+            logger.info("Selected game is not the correct version, or it is otherwise altered, please reset game to vanilla v1.2b")
             # TODO: consider clearing the path since the one we were given is invalid
-            return
+            return False
 
         with open(Utils.user_path("IslesOfSeaAndSky", "data.win"), "rb") as f:
 
@@ -223,11 +228,18 @@ class IslesOfSeaAndSkyContext(CommonContext):
 
         logger.info("Game Successfully Patched!")
         ### Future Feature
-        os.makedirs(name=Utils.user_path("IslesOfSeaAndSky", "Custom Sprites"), exist_ok=True)
+        '''os.makedirs(name=Utils.user_path("IslesOfSeaAndSky", "Custom Sprites"), exist_ok=True)
         with open(os.path.expandvars(Utils.user_path("IslesOfSeaAndSky", "Custom Sprites",
                                      "Which Character.txt")), "w") as f:
             f.writelines(["// CHANGING CHARACTER SPRITES IS CURRENTLY UNIMPLEMENTED.\n", "original"])
+            f.close()'''
+
+        with open(os.path.expandvars(Utils.user_path("IslesOfSeaAndSky", "Custom Sprites",
+                                     "README.txt")), "w") as f:
+            f.writelines(["// To allow sprites of other worlds games to show up in-game, install the Custom Assets in this folder.\n", "original"])
             f.close()
+
+        return True
 
     async def server_auth(self, password_requested: bool = False):
         if password_requested and not self.password:
