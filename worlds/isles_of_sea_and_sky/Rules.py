@@ -948,14 +948,14 @@ def set_stony_cliffs(self):
     player = self.player
     multiworld = self.multiworld
 
-    #set_rule(multiworld.get_location("Gold Stone Tablet [Stone Dungeon A1]", player),
-    #         lambda state: state.has("Topaz Rune Stone", player)
-    #                     and state.has("Star Piece", player, 20)
-    #                     and state.has("Awaken Earth Elementals", player))
+    set_rule(multiworld.get_location("Gold Stone Tablet [Stone Dungeon A1]", player),
+             lambda state: state.has("Topaz Rune Stone", player)
+                         and state.has("Star Piece", player, 20)
+                         and state.has("Awaken Earth Elementals", player))
 
-    #set_rule(multiworld.get_location("Blue Stone Tablet [Stone E3]", player),
-    #         lambda state: state.has("Topaz Rune Stone", player)
-    #                       and state.has("Star Piece", player, 20))
+    set_rule(multiworld.get_location("Blue Stone Tablet [Stone E3]", player),
+             lambda state: state.has("Topaz Rune Stone", player)
+                           and state.has("Star Piece", player, 20))
 
     set_rule(multiworld.get_location("Ancient Key [Stone C0]", player),
              lambda state: state.has("Awaken Earth Elementals", player))

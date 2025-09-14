@@ -33,8 +33,8 @@ advancement_table = {
     "Ruby Shard Hit [Sanctum C0]":                  AdvData(99907201, "Sanctum"),
     "Diamond Shard Hit [Sanctum A0]":               AdvData(99907001, "Sanctum"),
 
-    #"Blue Stone Tablet [Stone E3]":                 AdvData(134550, "Stony Cliffs Post-Rune"),
-    #"Gold Stone Tablet [Stone Dungeon A1]":         AdvData(134223, "Stony Cliffs Post-Rune"),
+    "Blue Stone Tablet [Stone E3]":                 AdvData(134550, "Stony Cliffs Post-Rune"),
+    "Gold Stone Tablet [Stone Dungeon A1]":         AdvData(134223, "Stony Cliffs Post-Rune"),
 
     "Fire Key [Fire A4]":                           AdvData(117766, "Raging Volcano Post-Rune"),
     "Fire Key [Fire A0]":                           AdvData(116592, "Raging Volcano Post-Rune"),
