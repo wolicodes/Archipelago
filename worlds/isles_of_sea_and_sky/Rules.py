@@ -1028,15 +1028,15 @@ def set_stony_cliffs(self):
              lambda state: state.has("Awaken Earth Elementals", player))
 
     set_rule(multiworld.get_location("Star Piece [Stone Dungeon E2]", player),
-             lambda state: state.has("Awaken Earth Elementals", player)
+             lambda state: (state.has("Awaken Earth Elementals", player) or state.can_reach("Stony Cliffs NW", "Region", player))
                            and state.has("Gopher Gloves", player)
                            and state.has("Frog Flippers", player))
 
     set_rule(multiworld.get_location("Ancient Key [Stone Dungeon E2]", player),
-             lambda state: state.has("Awaken Earth Elementals", player))
+             lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
 
     set_rule(multiworld.get_location("Star Piece [Stone Dungeon C3]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player)  or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
 
     set_rule(multiworld.get_location("Star Piece [Stone Dungeon C1]", player),
              lambda state: state.has("Gopher Gloves", player)
@@ -1106,27 +1106,27 @@ def set_stony_cliffs(self):
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon C4]", player),
                  lambda state: state.has("Awaken Earth Elementals", player))
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon C3]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon B2 - E]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon D2 - E]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon D2 - CE]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon D2 - W]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon D2 - CW]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon D1 - W]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon D1 - CS]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon D1 - E]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon E1]", player),
                  lambda state: state.has("Awaken Earth Elementals", player))
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon E2]", player),
-                 lambda state: state.has("Awaken Earth Elementals", player))
+                 lambda state: state.has("Awaken Earth Elementals", player) or (state.can_reach("Stony Cliffs NW", "Region", player) and state.has("Gopher Gloves", player) ) )
 
 
         set_rule(multiworld.get_location("Snakeblock [Stone Dungeon C1]", player),
