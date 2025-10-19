@@ -144,13 +144,6 @@ Isles Of Sea And Sky:
     some_traps: 0
     plenty_traps: 0
 
-  trap_link:
-    # When enabled, your received traps are linked to other players
-    #
-    # CURRENTLY UNIMPLEMENTED!!!
-    'false': 50
-    'true': 0
-
   # Item & Location Options
   local_items:
     # Forces these items to be in their native world.
