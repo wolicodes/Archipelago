@@ -227,16 +227,11 @@ class IslesOfSeaAndSkyContext(CommonContext):
             f.write(patchedFile)
 
         logger.info("Game Successfully Patched!")
-        ### Future Feature
-        '''os.makedirs(name=Utils.user_path("IslesOfSeaAndSky", "Custom Sprites"), exist_ok=True)
-        with open(os.path.expandvars(Utils.user_path("IslesOfSeaAndSky", "Custom Sprites",
-                                     "Which Character.txt")), "w") as f:
-            f.writelines(["// CHANGING CHARACTER SPRITES IS CURRENTLY UNIMPLEMENTED.\n", "original"])
-            f.close()'''
 
+        os.makedirs(name=Utils.user_path("IslesOfSeaAndSky", "Custom Sprites"), exist_ok=True)
         with open(os.path.expandvars(Utils.user_path("IslesOfSeaAndSky", "Custom Sprites",
                                      "README.txt")), "w") as f:
-            f.writelines(["// To allow sprites of other worlds games to show up in-game, install the Custom Assets in this folder.\n", "original"])
+            f.writelines(["// To allow sprites of other worlds games to show up in-game, install Custom Assets in this folder.\n", "original"])
             f.close()
 
         return True
