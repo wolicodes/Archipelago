@@ -2,10 +2,9 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from BaseClasses import CollectionState
 from worlds.etrian_odyssey_hd.data.Items import Items
 from worlds.etrian_odyssey_hd.data.Regions import Entrances
-from worlds.generic.Rules import add_rule, set_rule
+from worlds.generic.Rules import set_rule
 
 if TYPE_CHECKING:
     from .world import EOHDWorld
@@ -29,4 +28,4 @@ def set_all_entrance_rules(world: EOHDWorld) -> None:
 
 
 def set_completion_condition(world: EOHDWorld) -> None:
-    world.multiworld.completion_condition[world.player] = lambda state: state.has("Victory", world.player)
+    world.multiworld.completion_condition[world.player] = lambda state: state.has(Items.VICTORY, world.player)

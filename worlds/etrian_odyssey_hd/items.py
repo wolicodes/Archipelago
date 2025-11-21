@@ -3,10 +3,14 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from BaseClasses import Item
-from worlds.etrian_odyssey_hd.data.Items import Items
+from worlds.etrian_odyssey_hd.data.Items import DEFAULT_ITEM_CLASSIFICATIONS, ITEM_NAME_TO_ID, Items
 
 if TYPE_CHECKING:
     from .world import EOHDWorld
+
+
+class EOHDItem(Item):
+    game = "Etrian Odyssey HD"
 
 
 def get_random_filler_item_name(world: EOHDWorld) -> str:
@@ -15,6 +19,10 @@ def get_random_filler_item_name(world: EOHDWorld) -> str:
     if world.random.randint(0, 100) <= 50:
         return Items.EN50
     return Items.EN100
+
+def create_item_with_correct_classification(world: EOHDWorld, name: str) -> EOHDItem:
+    classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
+    return EOHDItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
 
 
 def create_all_items(world: EOHDWorld) -> None:

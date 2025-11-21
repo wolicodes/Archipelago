@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
-from BaseClasses import ItemClassification, Location
+from BaseClasses import Location
 from worlds.etrian_odyssey_hd.data.Items import Items
 from .data.Locations import ETRIA_LOCATIONS, B1F_MAIN_LOCATIONS, LOCATION_NAME_TO_ID, Locations
 from .data.Regions import Regions
@@ -39,5 +39,5 @@ def create_regular_locations(world: EOHDWorld) -> None:
 def create_events(world: EOHDWorld) -> None:
     etria = world.get_region(Regions.ETRIA)
     etria.add_event(
-        "Adventurers initiation", Items.VICTORY, location_type=EOHDLocation, item_type=items.EOHDItem
+        Locations.ADVENTURERS_INITIATION_COMPLETE, Items.VICTORY, location_type=EOHDLocation, item_type=items.EOHDItem
     )

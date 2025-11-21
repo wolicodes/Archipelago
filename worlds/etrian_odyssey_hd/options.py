@@ -5,13 +5,9 @@ class StartingMoney(Range):
     """
     How much money will you start the seed with.
     """
-
     display_name = "Starting money"
-
     range_start = 0
     range_end = 99999999
-
-    # Range options must define an explicit default value.
     default = 1000
 
 

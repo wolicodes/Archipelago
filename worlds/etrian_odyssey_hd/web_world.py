@@ -1,9 +1,6 @@
 from BaseClasses import Tutorial
 from worlds.AutoWorld import WebWorld
 
-from .options import option_groups, option_presets
-
-
 # For our game to display correctly on the website, we need to define a WebWorld subclass.
 class EOHDWebWorld(WebWorld):
     # We need to override the "game" field of the WebWorld superclass.
@@ -43,7 +40,3 @@ class EOHDWebWorld(WebWorld):
 
     # We add these tutorials to our WebWorld by overriding the "tutorials" field.
     tutorials = [setup_en, setup_de]
-
-    # If we have option groups and/or option presets, we need to specify these here as well.
-    option_groups = option_groups
-    options_presets = option_presets
