@@ -712,6 +712,8 @@ shops_location_table: dict[str, int] = {
     Locations.ZD_SHOP_ITEM8: 687
 }
 
+scrubs_one_time_only: tuple = (Locations.LW_DEKU_SCRUB_NEAR_BRIDGE, Locations.LW_DEKU_SCRUB_GROTTO_FRONT, Locations.HF_DEKU_SCRUB_GROTTO)
+
 scrubs_location_table: dict[str, int] = {
     Locations.LW_DEKU_SCRUB_NEAR_BRIDGE: 688,
     Locations.LW_DEKU_SCRUB_NEAR_DEKU_THEATER_LEFT: 689,
@@ -4068,4 +4070,13 @@ location_name_groups: dict[str, set[str]] = {
         Locations.GANONS_CASTLE_MQ_SCRUBS_FAIRY8,
         Locations.GANONS_CASTLE_SPIRIT_TRIAL_BEAMOS_SUNS_SONG_FAIRY
     }),
+}
+}
+
+token_amounts: dict[str, int] = {
+    Locations.KAK_50_GOLD_SKULLTULA_REWARD: 50,
+    Locations.KAK_40_GOLD_SKULLTULA_REWARD: 40,
+    Locations.KAK_30_GOLD_SKULLTULA_REWARD: 30,
+    Locations.KAK_20_GOLD_SKULLTULA_REWARD: 20,
+    Locations.KAK_10_GOLD_SKULLTULA_REWARD: 10
 }
