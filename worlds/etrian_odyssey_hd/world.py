@@ -1,6 +1,8 @@
 from collections.abc import Mapping
 from typing import Any
 from worlds.AutoWorld import World
+from worlds.etrian_odyssey_hd.data.Items import ITEM_NAME_TO_ID
+from worlds.etrian_odyssey_hd.data.Locations import LOCATION_NAME_TO_ID
 from . import items, locations, options, regions, rules, web_world
 
 class EOHDWorld(World):
@@ -15,8 +17,8 @@ class EOHDWorld(World):
     options_dataclass = options.EOHDOptions
     options: options.EOHDOptions
 
-    location_name_to_id = locations.LOCATION_NAME_TO_ID
-    item_name_to_id = items.ITEM_NAME_TO_ID
+    location_name_to_id = LOCATION_NAME_TO_ID
+    item_name_to_id = ITEM_NAME_TO_ID
 
     origin_region_name = "Etria"
 
