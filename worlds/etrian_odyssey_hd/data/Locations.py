@@ -1,0 +1,124 @@
+from enum import Enum
+
+class Locations(str, Enum):
+    # Etria
+    APOTHECARY_AXCELA = "Apothecary: Axcela"
+    APOTHECARY_AMRITA = "Apothecary: Amrita"
+    APOTHECARY_MEDICA = "Apothecary: Medica"
+    SHOP_SCRAMASAX = "Shop: Scramasax"
+    SHOP_KNIFE = "Shop: Knife"
+    SHOP_STAFF = "Shop: Staff"
+    SHOP_WAND = "Shop: Wand"
+    SHOP_HATCHET = "Shop: Hatchet"
+    SHOP_WOOD_BOW = "Shop: Wood Bow"
+    SHOP_LIGHT_WHIP = "Shop: Light Whip"
+    SHOP_TWEED = "Shop: Tweed"
+    SHOP_TARGE = "Shop: Targe"
+    SHOP_HAIRPIN = "Shop: Hairpin"
+    SHOP_KNIT_GLOVE = "Shop: Knit Glove"
+    SHOP_LEAF_BOOT = "Shop: Leaf Boot"
+    SHOP_HIDE_BELT = "Shop: Hide Belt"
+    SHOP_WARD_CHIME = "Shop: Ward Chime"
+    SHOP_ARIADNE_THREAD = "Shop: Ariadne Thread"
+    ADVENTURERS_INITIATION_COMPLETE = "Adventurers Initiation: Complete"
+    ADVENTURERS_INITIATION_REWARD_1 = "Adventurers Initiation: Reward 1"
+    ADVENTURERS_INITIATION_REWARD_2 = "Adventurers Initiation: Reward 2"
+    # B1F
+    B1F_MAIN_MOLES_WHITESTONE = "B1F Main: Moles whitestone" # Whitestone
+    B1F_MAIN_A3_TOP_CHEST = "B1F Main: A3 Top chest" # Scramasax
+    B1F_MAIN_A3_MIDDLE_CHEST = "B1F Main: A3 Middle chest" # Medica II
+    B1F_MAIN_A3_BOTTOM_CHEST = "B1F Main: A3 Bottom chest" # 200en
+    B1F_MAIN_EVENT_MOLES_ATTACK = "B1F Main: Event Moles attack" # Nothing
+    B1F_MAIN_EVENT_SIP_WATER = "B1F Main: Event Sip water" # 10TP at night
+    B1F_MAIN_EVENT_RED_FRUIT = "B1F Main: Event Red fruit" # 10HP First character
+    B1F_MAIN_EVENT_OLD_RUCKSACK = "B1F Main: Event Old rucksack" # 100en
+    B1F_MAIN_EVENT_VENOMFLIES_ATTACK = "B1F Main: Event Venomflies attack" # Nothing
+    B1F_MAIN_D1_CHOP = "B1F Main: D1 Chop"
+    B1F_MAIN_D3_CHOP = "B1F Main: D3 Chop"
+    B1F_CLEAR_CRYSTAL_ROOM_CHEST = "B1F Clear Crystal Room: Chest" # Nectar
+    B1F_VIOLET_CRYSTAL_ROOM_TOP_CHEST = "B1F Violet Crystal Room: Top chest" # Nectar II
+    B1F_VIOLET_CRYSTAL_ROOM_BOTTOM_CHEST = "B1F Violet Crystal Room: Bottom chest" # Gem Staff
+    B1F_EAST_NORTH_CHEST = "B1F East: North chest" # Plumed Hat
+    B1F_EAST_RAGELOPE_TOP_CHEST = "B1F East: Ragelope top chest" # Medica II
+    B1F_EAST_RAGELOPE_MIDDLE_CHEST = "B1F East: Ragelope middle chest" # Rapier
+    B1F_EAST_RAGELOPE_BOTTOM_CHEST = "B1F East: Ragelope bottom chest" # 500en
+
+ETRIA_LOCATIONS = [
+    Locations.APOTHECARY_AXCELA,
+    Locations.APOTHECARY_AMRITA,
+    Locations.APOTHECARY_MEDICA,
+    Locations.SHOP_SCRAMASAX,
+    Locations.SHOP_KNIFE,
+    Locations.SHOP_STAFF,
+    Locations.SHOP_WAND,
+    Locations.SHOP_HATCHET,
+    Locations.SHOP_WOOD_BOW,
+    Locations.SHOP_LIGHT_WHIP,
+    Locations.SHOP_TWEED,
+    Locations.SHOP_TARGE,
+    Locations.SHOP_HAIRPIN,
+    Locations.SHOP_KNIT_GLOVE,
+    Locations.SHOP_LEAF_BOOT,
+    Locations.SHOP_HIDE_BELT,
+    Locations.SHOP_WARD_CHIME,
+    Locations.SHOP_ARIADNE_THREAD,
+    Locations.ADVENTURERS_INITIATION_COMPLETE,
+    Locations.ADVENTURERS_INITIATION_REWARD_1,
+    Locations.ADVENTURERS_INITIATION_REWARD_2
+]
+
+B1F_MAIN_LOCATIONS = [
+    Locations.B1F_MAIN_MOLES_WHITESTONE,
+    Locations.B1F_MAIN_A3_TOP_CHEST,
+    Locations.B1F_MAIN_A3_MIDDLE_CHEST,
+    Locations.B1F_MAIN_A3_BOTTOM_CHEST,
+    Locations.B1F_MAIN_EVENT_MOLES_ATTACK,
+    Locations.B1F_MAIN_EVENT_SIP_WATER,
+    Locations.B1F_MAIN_EVENT_RED_FRUIT,
+    Locations.B1F_MAIN_EVENT_OLD_RUCKSACK,
+    Locations.B1F_MAIN_EVENT_VENOMFLIES_ATTACK,
+    Locations.B1F_MAIN_D1_CHOP,
+    Locations.B1F_MAIN_D3_CHOP,
+]
+
+LOCATION_NAME_TO_ID = {
+    Locations.APOTHECARY_AXCELA: 1,
+    Locations.APOTHECARY_AMRITA: 2,
+    Locations.APOTHECARY_MEDICA: 3,
+    Locations.SHOP_SCRAMASAX: 4,
+    Locations.SHOP_KNIFE: 5,
+    Locations.SHOP_STAFF: 6,
+    Locations.SHOP_WAND: 7,
+    Locations.SHOP_HATCHET: 8,
+    Locations.SHOP_WOOD_BOW: 9,
+    Locations.SHOP_LIGHT_WHIP: 10,
+    Locations.SHOP_TWEED: 11,
+    Locations.SHOP_TARGE: 12,
+    Locations.SHOP_HAIRPIN: 13,
+    Locations.SHOP_KNIT_GLOVE: 14,
+    Locations.SHOP_LEAF_BOOT: 15,
+    Locations.SHOP_HIDE_BELT: 16,
+    Locations.SHOP_WARD_CHIME: 17,
+    Locations.SHOP_ARIADNE_THREAD: 19,
+    Locations.B1F_MAIN_MOLES_WHITESTONE: 20,
+    Locations.B1F_MAIN_A3_TOP_CHEST: 21,
+    Locations.B1F_MAIN_A3_MIDDLE_CHEST: 22,
+    Locations.B1F_MAIN_A3_BOTTOM_CHEST: 23,
+    Locations.B1F_CLEAR_CRYSTAL_ROOM_CHEST: 24,
+    Locations.B1F_VIOLET_CRYSTAL_ROOM_TOP_CHEST: 25,
+    Locations.B1F_VIOLET_CRYSTAL_ROOM_BOTTOM_CHEST: 26,
+    Locations.B1F_EAST_NORTH_CHEST: 27,
+    Locations.B1F_EAST_RAGELOPE_TOP_CHEST: 28,
+    Locations.B1F_EAST_RAGELOPE_MIDDLE_CHEST: 29,
+    Locations.B1F_EAST_RAGELOPE_BOTTOM_CHEST: 30,
+    Locations.B1F_MAIN_EVENT_MOLES_ATTACK: 31,
+    Locations.B1F_MAIN_EVENT_SIP_WATER: 32,
+    Locations.B1F_MAIN_EVENT_RED_FRUIT: 33,
+    Locations.B1F_MAIN_EVENT_OLD_RUCKSACK: 34,
+    Locations.B1F_MAIN_EVENT_VENOMFLIES_ATTACK: 35,
+    Locations.B1F_MAIN_D1_CHOP: 36,
+    Locations.B1F_MAIN_D3_CHOP: 37,
+    Locations.ADVENTURERS_INITIATION_COMPLETE: 38,
+    Locations.ADVENTURERS_INITIATION_REWARD_1: 39,
+    Locations.ADVENTURERS_INITIATION_REWARD_2: 40,
+}

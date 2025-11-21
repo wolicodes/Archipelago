@@ -1,7 +1,7 @@
-from .bases import APQuestTestBase
+from .bases import EOHDTestBase
 
 
-class TestHammerOff(APQuestTestBase):
+class TestHammerOff(EOHDTestBase):
     options = {
         "hammer": False,
     }
@@ -31,7 +31,7 @@ class TestHammerOff(APQuestTestBase):
         self.assertTrue(top_middle_chest_player_one.can_reach(self.multiworld.state))
 
 
-class TestHammerOn(APQuestTestBase):
+class TestHammerOn(EOHDTestBase):
     options = {
         "hammer": True,
     }
