@@ -20,6 +20,7 @@ def get_random_filler_item_name(world: EOHDWorld) -> str:
         return Items.EN50.value
     return Items.EN100.value
 
+
 def create_item_with_correct_classification(world: EOHDWorld, name: str) -> EOHDItem:
     classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
     return EOHDItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
