@@ -36,8 +36,8 @@ class Items(str, Enum):
     EN500 = "500en"
     EN200 = "200en"
     EN100 = "100en"
-    NIGHT_10TP = "Feeling refreshed"
-    FIRST_CHAR_10HP = "Ate a red fruit"
+    NIGHT_10TP = "Feeling Refreshed"
+    FIRST_CHAR_10HP = "Red Fruit Eaten"
     # Fillers
     EN50 = "50en"
     EN1 = "1en"
