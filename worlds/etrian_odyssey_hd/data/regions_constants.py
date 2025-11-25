@@ -1,0 +1,6 @@
+ETRIA = "Etria"
+B1F_MAIN = "B1F Main"
+B1F_CLEAR_CRYSTAL_ROOM = "B1F Clear Crystal Room"
+B1F_VIOLET_CRYSTAL_ROOM = "B1F Violet Crystal Room"
+B1F_EAST = "B1F East"
+B2F_MAIN = "B2F Main"
