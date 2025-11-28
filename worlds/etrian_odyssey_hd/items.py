@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from BaseClasses import Item
-from worlds.etrian_odyssey_hd.data import items_constants as itm
+from worlds.etrian_odyssey_hd.data import items_constants as itm, locations_constants as loc
 
 if TYPE_CHECKING:
     from .world import EOHDWorld
@@ -28,49 +28,9 @@ def create_item_with_correct_classification(world: EOHDWorld, name: str) -> EOHD
 
 def create_all_items(world: EOHDWorld) -> None:
     itempool: list[Item] = [
-        world.create_item(itm.AXCELA),
-        world.create_item(itm.AMRITA),
-        world.create_item(itm.MEDICA),
-        world.create_item(itm.SCRAMASAX),
-        world.create_item(itm.KNIFE),
-        world.create_item(itm.STAFF),
-        world.create_item(itm.WAND),
-        world.create_item(itm.HATCHET),
-        world.create_item(itm.WOOD_BOW),
-        world.create_item(itm.LIGHT_WHIP),
-        world.create_item(itm.TWEED),
-        world.create_item(itm.TARGE),
-        world.create_item(itm.HAIRPIN),
-        world.create_item(itm.KNIT_GLOVE),
-        world.create_item(itm.LEAF_BOOT),
-        world.create_item(itm.HIDE_BELT),
-        world.create_item(itm.WARD_CHIME),
-        world.create_item(itm.ARIADNE_THREAD),
-        # world.create_item(itm.VICTORY),
-        world.create_item(itm.RADHA_NOTE),
-        world.create_item(itm.EN500),
-        world.create_item(itm.WHITESTONE),
-        world.create_item(itm.SCRAMASAX),
-        world.create_item(itm.MEDICA_II),
-        world.create_item(itm.EN200),
-        # B1F Main: Event Moles Attack
-        world.create_item(itm.NIGHT_10TP),
-        world.create_item(itm.FIRST_CHAR_10HP),
-        world.create_item(itm.EN100),
-        # B1F Main: Event Venomflies Attack
-        # B1F Main: D1 Chop
-        # B1F Main: D3 Chop
-        world.create_item(itm.NECTAR),
-        world.create_item(itm.NECTAR_II),
-        world.create_item(itm.GEM_STAFF),
-        world.create_item(itm.PLUMED_HAT),
-        world.create_item(itm.MEDICA_II),
-        world.create_item(itm.RAPIER),
-        world.create_item(itm.EN500),
-        # No locations for these yet
-        world.create_item(itm.CLEAR_KEY),
-        world.create_item(itm.VIOLET_KEY),
-        world.create_item(itm.FIRST_STRATUM_CLEARED),
+        world.create_item(data["vanilla"])
+        for data in loc.LOCATION_DATA.values()
+        if data.get("vanilla") is not None
     ]
 
     number_of_items = len(itempool)

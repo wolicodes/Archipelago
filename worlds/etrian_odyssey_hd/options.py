@@ -1,5 +1,7 @@
-from dataclasses import dataclass
-from Options import PerGameCommonOptions, Range
+from dataclasses import dataclass, fields
+from Options import PerGameCommonOptions, Range, Toggle
+
+SHOP_SANITY = "shop_sanity"
 
 class StartingMoney(Range):
     """
@@ -10,7 +12,14 @@ class StartingMoney(Range):
     range_end = 99999999
     default = 1000
 
+class ShopSanity(Toggle):
+    """
+    If enabled, each item you buy for the first time in Shilleka's Goods or the Apothecary will be a check.
+    """
+    display_name = "Shop sanity"
+
 
 @dataclass
 class EOHDOptions(PerGameCommonOptions):
     starting_money: StartingMoney
+    shop_sanity: ShopSanity
