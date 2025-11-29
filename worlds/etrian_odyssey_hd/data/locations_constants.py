@@ -43,7 +43,7 @@ B1F_EAST_RAGELOPE_TOP_CHEST = "B1F East - Ragelope Top Chest" # Medica II
 B1F_EAST_RAGELOPE_MIDDLE_CHEST = "B1F East - Ragelope Middle Chest" # Rapier
 B1F_EAST_RAGELOPE_BOTTOM_CHEST = "B1F East - Ragelope Bottom Chest" # 500en
 # B5F
-FIRST_STRATUM_CLEARED = "Fenrir Defeated" # First Stratum Cleared
+FIRST_STRATUM_CLEARED = "First Stratum Cleard"
 
 LOCATION_DATA = {
     APOTHECARY_AXCELA: {
@@ -233,6 +233,7 @@ LOCATION_DATA = {
         "id": 35,
         "region": reg.B1F_MAIN,
         "vanilla": None,
+        "event": itm.FIRST_STRATUM_CLEARED
     },
     B1F_MAIN_D1_CHOP: {
         "id": 36,
@@ -259,12 +260,6 @@ LOCATION_DATA = {
         "id": 40,
         "region": reg.ETRIA,
         "vanilla": itm.EN500
-    },
-    FIRST_STRATUM_CLEARED: {
-        "id": 41,
-        "region": reg.B1F_MAIN,
-        "vanilla": None,
-        "event": itm.FIRST_STRATUM_CLEARED
     },
 }
 

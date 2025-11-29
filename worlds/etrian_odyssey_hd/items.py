@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from BaseClasses import Item
-from worlds.etrian_odyssey_hd.data import items_constants as itm, locations_constants as loc
+from .data import items_constants as itm, locations_constants as loc
 
 if TYPE_CHECKING:
     from .world import EOHDWorld
