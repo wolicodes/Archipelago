@@ -39,5 +39,5 @@ class EOHDWorld(World):
 
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
-            "starting_money", "shop_sanity"
+            "starting_money", "shop_sanity", "price_mode", "price_percent_value", "price_flat_value"
         )

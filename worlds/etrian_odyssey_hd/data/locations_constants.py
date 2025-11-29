@@ -29,10 +29,8 @@ B1F_MAIN_A3_TOP_CHEST = "B1F Main - A3 Top Chest" # Scramasax
 B1F_MAIN_A3_MIDDLE_CHEST = "B1F Main - A3 Middle Chest" # Medica II
 B1F_MAIN_A3_BOTTOM_CHEST = "B1F Main - A3 Bottom Chest" # 200en
 B1F_MAIN_EVENT_MOLES_ATTACK = "B1F Main - Event Moles Attack" # Nothing
-B1F_MAIN_EVENT_SIP_WATER = "B1F Main - Event Sip Water" # 10TP at night
 B1F_MAIN_EVENT_RED_FRUIT = "B1F Main - Event Red Fruit" # 10HP First character
 B1F_MAIN_EVENT_OLD_RUCKSACK = "B1F Main - Event Old Rucksack" # 100en
-B1F_MAIN_EVENT_VENOMFLIES_ATTACK = "B1F Main - Event Venomflies Attack" # Nothing
 B1F_MAIN_D1_CHOP = "B1F Main - D1 Chop"
 B1F_MAIN_D3_CHOP = "B1F Main - D3 Chop"
 B1F_CLEAR_CRYSTAL_ROOM_CHEST = "B1F Clear Crystal Room - Chest" # Nectar
@@ -212,12 +210,8 @@ LOCATION_DATA = {
     B1F_MAIN_EVENT_MOLES_ATTACK: {
         "id": 31,
         "region": reg.B1F_MAIN,
-        "vanilla": None
-    },
-    B1F_MAIN_EVENT_SIP_WATER: {
-        "id": 32,
-        "region": reg.B1F_MAIN,
-        "vanilla": itm.NIGHT_10TP
+        "vanilla": None,
+        "event": itm.FIRST_STRATUM_CLEARED
     },
     B1F_MAIN_EVENT_RED_FRUIT: {
         "id": 33,
@@ -228,12 +222,6 @@ LOCATION_DATA = {
         "id": 34,
         "region": reg.B1F_MAIN,
         "vanilla": itm.EN100
-    },
-    B1F_MAIN_EVENT_VENOMFLIES_ATTACK: {
-        "id": 35,
-        "region": reg.B1F_MAIN,
-        "vanilla": None,
-        "event": itm.FIRST_STRATUM_CLEARED
     },
     B1F_MAIN_D1_CHOP: {
         "id": 36,
