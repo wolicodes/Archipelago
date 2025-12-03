@@ -374,6 +374,14 @@ async def process_isles_of_sea_and_sky_cmd(ctx: IslesOfSeaAndSkyContext, cmd: st
             f.write("altRooms: "            + str(ctx.altRooms)            + '\n')
             f.close()
 
+        # Make sure organized directories exists so file paths are valid from the get-go.
+        if not os.path.isdir(ctx.save_game_folder + "/AP"):
+            os.makedirs(ctx.save_game_folder + "/AP")
+        if not os.path.isdir(ctx.save_game_folder + "/AP/IN"):
+            os.makedirs(ctx.save_game_folder + "/AP/IN")
+        if not os.path.isdir(ctx.save_game_folder + "/AP/OUT"):
+            os.makedirs(ctx.save_game_folder + "/AP/OUT")
+
         filename = f"sent.items"
         with open(os.path.join(ctx.save_game_folder + "/AP/OUT", filename), "a") as f:
             for ss in set(args["checked_locations"]):
