@@ -252,7 +252,7 @@ class KeymastersKeepWorld(World):
             locations_needed += self.artifacts_of_resolve_total
 
         if self.shops:
-            locations_needed += 50  # We add unique relics to the pool when shops are enabled
+            locations_needed += self.shop_items_maximum * shop_count  # We add unique relics to the pool when shops are enabled
 
         area_trials_range_modified: bool = False
 
