@@ -28,14 +28,14 @@ def create_item_with_correct_classification(world: EOHDWorld, name: str) -> EOHD
 
 def create_all_items(world: EOHDWorld) -> None:
     itempool: list[Item] = [
-        world.create_item(data["vanilla"])
+        world.create_item(data.item)
         for data in loc.LOCATION_DATA.values()
-        if data.get("vanilla") is not None
+        if data.item is not None
     ]
 
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
     needed_number_of_filler_items = number_of_unfilled_locations - number_of_items
-    
+
     itempool += [world.create_filler() for _ in range(needed_number_of_filler_items)]
     world.multiworld.itempool += itempool

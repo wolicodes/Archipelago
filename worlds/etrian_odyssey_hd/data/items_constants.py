@@ -1065,10 +1065,8 @@ ITEM_NAME_TO_ID = {
     EN500: 1000003,
     EN200: 1000004,
     EN100: 1000005,
-    NIGHT_10TP: 1000006,
-    FIRST_CHAR_10HP: 1000007,
-    EN50: 1000008,
-    EN1: 1000009,
+    EN50: 1000006,
+    EN1: 1000007,
 }
 
 DEFAULT_ITEM_CLASSIFICATIONS = {
@@ -1591,15 +1589,13 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     BANDANNA: ItemClassification.useful | ItemClassification.filler,
     PEARL: ItemClassification.useful | ItemClassification.filler,
     RARE_MEAT: ItemClassification.useful | ItemClassification.filler,
-    
+
     # Custom items
     FIRST_STRATUM_CLEARED: ItemClassification.progression,
     VICTORY: ItemClassification.progression,
-    EN500: ItemClassification.useful,
+    EN500: ItemClassification.filler,
     EN200: ItemClassification.filler,
     EN100: ItemClassification.filler,
-    NIGHT_10TP: ItemClassification.filler,
-    FIRST_CHAR_10HP: ItemClassification.filler,
     EN50: ItemClassification.filler,
     EN1: ItemClassification.filler,
 }
