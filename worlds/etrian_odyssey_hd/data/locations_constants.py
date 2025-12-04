@@ -1,256 +1,85 @@
+"""Module containing all the location data for Etrian Odyssey HD"""
+
+from dataclasses import dataclass
+from enum import Flag, auto
+from typing import Optional
 from . import items_constants as itm, regions_constants as reg
-from .. import options
 
-# Etria
-APOTHECARY_AXCELA = "Apothecary - Axcela"
-APOTHECARY_AMRITA = "Apothecary - Amrita"
-APOTHECARY_MEDICA = "Apothecary - Medica"
-SHOP_SCRAMASAX = "Shop - Scramasax"
-SHOP_KNIFE = "Shop - Knife"
-SHOP_STAFF = "Shop - Staff"
-SHOP_WAND = "Shop - Wand"
-SHOP_HATCHET = "Shop - Hatchet"
-SHOP_WOOD_BOW = "Shop - Wood Bow"
-SHOP_LIGHT_WHIP = "Shop - Light Whip"
-SHOP_TWEED = "Shop - Tweed"
-SHOP_TARGE = "Shop - Targe"
-SHOP_HAIRPIN = "Shop - Hairpin"
-SHOP_KNIT_GLOVE = "Shop - Knit Glove"
-SHOP_LEAF_BOOT = "Shop - Leaf Boot"
-SHOP_HIDE_BELT = "Shop - Hide Belt"
-SHOP_WARD_CHIME = "Shop - Ward Chime"
-SHOP_ARIADNE_THREAD = "Shop - Ariadne Thread"
-ADVENTURERS_INITIATION_COMPLETE = "Adventurers Initiation - Complete"
-ADVENTURERS_INITIATION_REWARD_1 = "Adventurers Initiation - Reward 1"
-ADVENTURERS_INITIATION_REWARD_2 = "Adventurers Initiation - Reward 2"
-# B1F
-B1F_MAIN_MOLES_WHITESTONE = "B1F Main - Moles Whitestone" # Whitestone
-B1F_MAIN_A3_TOP_CHEST = "B1F Main - A3 Top Chest" # Scramasax
-B1F_MAIN_A3_MIDDLE_CHEST = "B1F Main - A3 Middle Chest" # Medica II
-B1F_MAIN_A3_BOTTOM_CHEST = "B1F Main - A3 Bottom Chest" # 200en
-B1F_MAIN_EVENT_MOLES_ATTACK = "B1F Main - Event Moles Attack" # Nothing
-B1F_MAIN_EVENT_RED_FRUIT = "B1F Main - Event Red Fruit" # 10HP First character
-B1F_MAIN_EVENT_OLD_RUCKSACK = "B1F Main - Event Old Rucksack" # 100en
-B1F_MAIN_D1_CHOP = "B1F Main - D1 Chop"
-B1F_MAIN_D3_CHOP = "B1F Main - D3 Chop"
-B1F_CLEAR_CRYSTAL_ROOM_CHEST = "B1F Clear Crystal Room - Chest" # Nectar
-B1F_VIOLET_CRYSTAL_ROOM_TOP_CHEST = "B1F Violet Crystal Room - Top Chest" # Nectar II
-B1F_VIOLET_CRYSTAL_ROOM_BOTTOM_CHEST = "B1F Violet Crystal Room - Bottom Chest" # Gem Staff
-B1F_EAST_NORTH_CHEST = "B1F East - North Chest" # Plumed Hat
-B1F_EAST_RAGELOPE_TOP_CHEST = "B1F East - Ragelope Top Chest" # Medica II
-B1F_EAST_RAGELOPE_MIDDLE_CHEST = "B1F East - Ragelope Middle Chest" # Rapier
-B1F_EAST_RAGELOPE_BOTTOM_CHEST = "B1F East - Ragelope Bottom Chest" # 500en
-# B5F
-FIRST_STRATUM_CLEARED = "First Stratum Cleard"
 
-LOCATION_DATA = {
-    APOTHECARY_AXCELA: {
-        "id": 1,
-        "region": reg.ETRIA,
-        "vanilla": itm.AXCELA,
-        "option": options.SHOP_SANITY
-    },
-    APOTHECARY_AMRITA: {
-        "id": 2,
-        "region": reg.ETRIA,
-        "vanilla": itm.AMRITA,
-        "option": options.SHOP_SANITY
-    },
-    APOTHECARY_MEDICA: {
-        "id": 3,
-        "region": reg.ETRIA,
-        "vanilla": itm.MEDICA,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_SCRAMASAX: {
-        "id": 4,
-        "region": reg.ETRIA,
-        "vanilla": itm.SCRAMASAX,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_KNIFE: {
-        "id": 5,
-        "region": reg.ETRIA,
-        "vanilla": itm.KNIFE,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_STAFF: {
-        "id": 6,
-        "region": reg.ETRIA,
-        "vanilla": itm.STAFF,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_WAND: {
-        "id": 7,
-        "region": reg.ETRIA,
-        "vanilla": itm.WAND,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_HATCHET: {
-        "id": 8,
-        "region": reg.ETRIA,
-        "vanilla": itm.HATCHET,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_WOOD_BOW: {
-        "id": 9,
-        "region": reg.ETRIA,
-        "vanilla": itm.WOOD_BOW,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_LIGHT_WHIP: {
-        "id": 10,
-        "region": reg.ETRIA,
-        "vanilla": itm.LIGHT_WHIP,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_TWEED: {
-        "id": 11,
-        "region": reg.ETRIA,
-        "vanilla": itm.TWEED,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_TARGE: {
-        "id": 12,
-        "region": reg.ETRIA,
-        "vanilla": itm.TARGE,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_HAIRPIN: {
-        "id": 13,
-        "region": reg.ETRIA,
-        "vanilla": itm.HAIRPIN,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_KNIT_GLOVE: {
-        "id": 14,
-        "region": reg.ETRIA,
-        "vanilla": itm.KNIT_GLOVE,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_LEAF_BOOT: {
-        "id": 15,
-        "region": reg.ETRIA,
-        "vanilla": itm.LEAF_BOOT,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_HIDE_BELT: {
-        "id": 16,
-        "region": reg.ETRIA,
-        "vanilla": itm.HIDE_BELT,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_WARD_CHIME: {
-        "id": 17,
-        "region": reg.ETRIA,
-        "vanilla": itm.WARD_CHIME,
-        "option": options.SHOP_SANITY
-    },
-    SHOP_ARIADNE_THREAD: {
-        "id": 19,
-        "region": reg.ETRIA,
-        "vanilla": itm.ARIADNE_THREAD,
-        "option": options.SHOP_SANITY
-    },
-    B1F_MAIN_MOLES_WHITESTONE: {
-        "id": 20,
-        "region": reg.B1F_MAIN,
-        "vanilla": itm.WHITESTONE
-    },
-    B1F_MAIN_A3_TOP_CHEST: {
-        "id": 21,
-        "region": reg.B1F_MAIN,
-        "vanilla": itm.SCRAMASAX
-    },
-    B1F_MAIN_A3_MIDDLE_CHEST: {
-        "id": 22,
-        "region": reg.B1F_MAIN,
-        "vanilla": itm.MEDICA_II
-    },
-    B1F_MAIN_A3_BOTTOM_CHEST: {
-        "id": 23,
-        "region": reg.B1F_MAIN,
-        "vanilla": itm.EN200
-    },
-    B1F_CLEAR_CRYSTAL_ROOM_CHEST: {
-        "id": 24,
-        "region": reg.B1F_CLEAR_CRYSTAL_ROOM,
-        "vanilla": itm.NECTAR
-    },
-    B1F_VIOLET_CRYSTAL_ROOM_TOP_CHEST: {
-        "id": 25,
-        "region": reg.B1F_VIOLET_CRYSTAL_ROOM,
-        "vanilla": itm.NECTAR_II
-    },
-    B1F_VIOLET_CRYSTAL_ROOM_BOTTOM_CHEST: {
-        "id": 26,
-        "region": reg.B1F_VIOLET_CRYSTAL_ROOM,
-        "vanilla": itm.GEM_STAFF
-    },
-    B1F_EAST_NORTH_CHEST: {
-        "id": 27,
-        "region": reg.B1F_EAST,
-        "vanilla": itm.PLUMED_HAT
-    },
-    B1F_EAST_RAGELOPE_TOP_CHEST: {
-        "id": 28,
-        "region": reg.B1F_EAST,
-        "vanilla": itm.MEDICA_II
-    },
-    B1F_EAST_RAGELOPE_MIDDLE_CHEST: {
-        "id": 29,
-        "region": reg.B1F_EAST,
-        "vanilla": itm.RAPIER
-    },
-    B1F_EAST_RAGELOPE_BOTTOM_CHEST: {
-        "id": 30,
-        "region": reg.B1F_EAST,
-        "vanilla": itm.EN500
-    },
-    B1F_MAIN_EVENT_MOLES_ATTACK: {
-        "id": 31,
-        "region": reg.B1F_MAIN,
-        "vanilla": None,
-        "event": itm.FIRST_STRATUM_CLEARED
-    },
-    B1F_MAIN_EVENT_RED_FRUIT: {
-        "id": 33,
-        "region": reg.B1F_MAIN,
-        "vanilla": itm.FIRST_CHAR_10HP
-    },
-    B1F_MAIN_EVENT_OLD_RUCKSACK: {
-        "id": 34,
-        "region": reg.B1F_MAIN,
-        "vanilla": itm.EN100
-    },
-    B1F_MAIN_D1_CHOP: {
-        "id": 36,
-        "region": reg.B1F_MAIN,
-        "vanilla": itm.VIOLET_KEY # TODO Change this
-    },
-    B1F_MAIN_D3_CHOP: {
-        "id": 37,
-        "region": reg.B1F_MAIN,
-        "vanilla": itm.CLEAR_KEY # TODO Change this
-    },
-    ADVENTURERS_INITIATION_COMPLETE: {
-        "id": 38,
-        "region": reg.ETRIA,
-        "vanilla": None,
-        "event": itm.VICTORY
-    },
-    ADVENTURERS_INITIATION_REWARD_1: {
-        "id": 39,
-        "region": reg.ETRIA,
-        "vanilla": itm.RADHA_NOTE
-    },
-    ADVENTURERS_INITIATION_REWARD_2: {
-        "id": 40,
-        "region": reg.ETRIA,
-        "vanilla": itm.EN500
-    },
+class EOHDFlag(Flag):
+    """
+    This class represents flags used for categorizing game locations.
+    Flags are used to group locations by their specific gameplay or logic attributes.
+    """
+
+    ALWAYS = auto()
+    SHOP = auto()
+    EVENT = auto()
+    EVENT_ITEM = auto()
+
+
+@dataclass(frozen=True)
+class EOHDLocationData:
+    """
+    This class represents the data for a location in Etrian Odyssey HD.
+
+    :param code: The unique code identifier for the location.
+    :param flags: The flags that categorize the location.
+    :param region: The name of the region where the location resides.
+    :param item: The item that will be shuffled in the pool when this location is active.
+    """
+
+    id: int
+    region: str
+    item: Optional[str]
+    event: Optional[str]
+    flags: EOHDFlag
+
+
+# Missing Clear key, violet key, first stratum complete, victory
+LOCATION_DATA: dict[str, EOHDLocationData] = {
+    "Etria - Apothecary Axcela": EOHDLocationData(1, reg.ETRIA, itm.AXCELA, None, EOHDFlag.SHOP),
+    "Etria - Apothecary Amrita": EOHDLocationData(2, reg.ETRIA, itm.AMRITA, None, EOHDFlag.SHOP),
+    "Etria - Apothecary Medica": EOHDLocationData(3, reg.ETRIA, itm.MEDICA, None, EOHDFlag.SHOP),
+    "Etria - Shop Scramasax": EOHDLocationData(4, reg.ETRIA, itm.SCRAMASAX, None, EOHDFlag.SHOP),
+    "Etria - Shop Knife": EOHDLocationData(5, reg.ETRIA, itm.KNIFE, None, EOHDFlag.SHOP),
+    "Etria - Shop Staff": EOHDLocationData(6, reg.ETRIA, itm.STAFF, None, EOHDFlag.SHOP),
+    "Etria - Shop Wand": EOHDLocationData(7, reg.ETRIA, itm.WAND, None, EOHDFlag.SHOP),
+    "Etria - Shop Hatchet": EOHDLocationData(8, reg.ETRIA, itm.HATCHET, None, EOHDFlag.SHOP),
+    "Etria - Shop Wood Bow": EOHDLocationData(9, reg.ETRIA, itm.WOOD_BOW, None, EOHDFlag.SHOP),
+    "Etria - Shop Light Whip": EOHDLocationData(10, reg.ETRIA, itm.LIGHT_WHIP, None, EOHDFlag.SHOP),
+    "Etria - Shop Tweed": EOHDLocationData(11, reg.ETRIA, itm.TWEED, None, EOHDFlag.SHOP),
+    "Etria - Shop Targe": EOHDLocationData(12, reg.ETRIA, itm.TARGE, None, EOHDFlag.SHOP),
+    "Etria - Shop Hairpin": EOHDLocationData(13, reg.ETRIA, itm.HAIRPIN, None, EOHDFlag.SHOP),
+    "Etria - Shop Knit Glove": EOHDLocationData(14, reg.ETRIA, itm.KNIT_GLOVE, None, EOHDFlag.SHOP),
+    "Etria - Shop Leaf Boot": EOHDLocationData(15, reg.ETRIA, itm.LEAF_BOOT, None, EOHDFlag.SHOP),
+    "Etria - Shop Hide Belt": EOHDLocationData(16, reg.ETRIA, itm.HIDE_BELT, None, EOHDFlag.SHOP),
+    "Etria - Shop Ward Chime": EOHDLocationData(17, reg.ETRIA, itm.WARD_CHIME, None, EOHDFlag.SHOP),
+    "Etria - Shop Ariadne Thread": EOHDLocationData(18, reg.ETRIA, itm.ARIADNE_THREAD, None, EOHDFlag.SHOP),
+    "Etria - Adventurers Initiation Reward 1": EOHDLocationData(19, reg.ETRIA, itm.RADHA_NOTE, None, EOHDFlag.ALWAYS),
+    "Etria - Adventurers Initiation Reward 2": EOHDLocationData(20, reg.ETRIA, itm.EN500, None, EOHDFlag.ALWAYS),
+
+    "B1F Main - Event Moles Attack": EOHDLocationData(21, reg.B1F_MAIN, None, None, EOHDFlag.EVENT),
+    "B1F Main - Moles Whitestone": EOHDLocationData(22, reg.B1F_MAIN, itm.WHITESTONE, None, EOHDFlag.EVENT_ITEM),
+    "B1F Main - A3 Top Chest": EOHDLocationData(23, reg.B1F_MAIN, itm.SCRAMASAX, None, EOHDFlag.ALWAYS),
+    "B1F Main - A3 Middle Chest": EOHDLocationData(24, reg.B1F_MAIN, itm.MEDICA_II, None, EOHDFlag.ALWAYS),
+    "B1F Main - A3 Bottom Chest": EOHDLocationData(25, reg.B1F_MAIN, itm.EN200, None, EOHDFlag.ALWAYS),
+    "B1F Main - Event Red Fruit": EOHDLocationData(26, reg.B1F_MAIN, None, None, EOHDFlag.EVENT),
+    "B1F Main - Event Old Rucksack": EOHDLocationData(27, reg.B1F_MAIN, None, None, EOHDFlag.EVENT),
+    "B1F Main - Old Rucksack 100en": EOHDLocationData(28, reg.B1F_MAIN, itm.EN100, None, EOHDFlag.EVENT_ITEM),
+    "B1F Main - Event Venomflies Attack": EOHDLocationData(29, reg.B1F_MAIN, None, None, EOHDFlag.EVENT),
+
+    "B1F Clear Crystal Room - Chest": EOHDLocationData(30, reg.B1F_CLEAR_CRYSTAL_ROOM, itm.NECTAR, None, EOHDFlag.ALWAYS),
+
+    "B1F Violet Crystal Room - Top Chest": EOHDLocationData(31, reg.B1F_VIOLET_CRYSTAL_ROOM, itm.NECTAR_II, None, EOHDFlag.ALWAYS),
+    "B1F Violet Crystal Room - Bottom Chest": EOHDLocationData(32, reg.B1F_VIOLET_CRYSTAL_ROOM, itm.GEM_STAFF, None, EOHDFlag.ALWAYS),
+
+    "B1F East - North Chest": EOHDLocationData(33, reg.B1F_EAST, itm.PLUMED_HAT, None, EOHDFlag.ALWAYS),
+    "B1F East - Ragelope Top Chest": EOHDLocationData(34, reg.B1F_EAST, itm.MEDICA_II, None, EOHDFlag.ALWAYS),
+    "B1F East - Ragelope Middle Chest": EOHDLocationData(35, reg.B1F_EAST, itm.RAPIER, None, EOHDFlag.ALWAYS),
+    "B1F East - Ragelope Bottom Chest": EOHDLocationData(36, reg.B1F_EAST, itm.EN500, None, EOHDFlag.ALWAYS),
 }
 
 LOCATION_NAME_TO_ID = {
-    name: data["id"] for name, data in LOCATION_DATA.items()
+    name: data.id for name, data in LOCATION_DATA.items()
 }
