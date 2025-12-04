@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from Options import Choice, PerGameCommonOptions, Range, Toggle
+from Options import Choice, OptionSet, PerGameCommonOptions, Range, Toggle
 
 
 class ExpModifier(Range):
@@ -12,6 +12,64 @@ class ExpModifier(Range):
     range_end = 1000
     default = 100
 
+
+class Goal(OptionSet):
+    """What bosses must be defeated for this world to goal. You can select however many you want, and only
+    when all the selected bosses are defeated is the world considered goaled.
+
+    Valid options are:
+        - "Fenrir"
+        - "Cernunos"
+        - "Royalant"
+        - "Cotrangl"
+        - "Iwaopeln"
+        - "Ren and Tlachtga"
+        - "Etreant"
+        - "Golem"
+        - "Wyvern"
+        - "Manticor"
+        - "Alraune"
+        - "Wyrm"
+        - "Drake"
+        - "Dragon"
+        - "Primevil"
+        - "Wrymoid"
+        - "Drakoid"
+        - "Dragoid"
+    """
+    valid_keys = {
+        "Fenrir",
+        "Cernunos",
+        "Royalant",
+        "Cotrangl",
+        "Iwaopeln",
+        "Ren and Tlachtga",
+        "Etreant",
+        "Golem",
+        "Wyvern",
+        "Manticor",
+        "Alraune",
+        "Wyrm",
+        "Drake",
+        "Dragon",
+        "Primevil",
+        "Wrymoid",
+        "Drakoid",
+        "Dragoid",
+    }
+    internal_name = "goal"
+    display_name = "Goal"
+    default = {"Etreant"}
+    
+class JunkFloorsAfterLatestGoalBoss(Toggle):
+    """
+    If enabled, the floors after the deepest boss defined in the "goal" setting will be junked.
+    i.e. if you only have Fenrir as a goal, it will junk everything after B5F.
+    If you have multiple bosse, it will do the same but with the deepest boss of the list.
+    """
+    internal_name = "junk_floors_after_latest_goal_boss"
+    display_name = "Junk floors after latest goal boss"
+    default = True
 
 class StartingMoney(Range):
     """
@@ -88,9 +146,26 @@ class PriceFlatValue(Range):
     range_end = 250000
     default = 100
 
+    
+class EnableQuestsRewards(Toggle):
+    """
+    If enabled, quests rewards will be added to the pool.
+    """
+    internal_name = "enable_quest_rewards"
+    display_name = "Enable quest rewards"
+    
+class ShuffleMusic(Toggle):
+    """
+    If enabled, music will be shuffled.
+    """
+    internal_name = "music_shuffle"
+    display_name = "Shuffle music"
+
 
 @dataclass
 class EOHDOptions(PerGameCommonOptions):
+    goal: Goal
+    junk_floors_after_latest_goal_boss: JunkFloorsAfterLatestGoalBoss
     starting_money: StartingMoney
     exp_modifier: ExpModifier
     event_items: EventItems
@@ -99,3 +174,5 @@ class EOHDOptions(PerGameCommonOptions):
     price_mode: PriceMode
     price_percent_value: PricePercentValue
     price_flat_value: PriceFlatValue
+    enable_quest_rewards: EnableQuestsRewards
+    music_shuffle: ShuffleMusic

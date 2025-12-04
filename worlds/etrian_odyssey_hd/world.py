@@ -39,5 +39,16 @@ class EOHDWorld(World):
 
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
-            "starting_money", "shop_sanity", "price_mode", "price_percent_value", "price_flat_value"
+            "goal",
+            "junk_floors_after_latest_goal_boss",
+            "starting_money",
+            "exp_modifier",
+            "event_items",
+            # "event_sanity",
+            "shop_sanity",
+            "price_mode",
+            "price_percent_value",
+            "price_flat_value",
+            "enable_quest_rewards",
+            "music_shuffle",
         )
