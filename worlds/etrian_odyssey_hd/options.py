@@ -2,16 +2,6 @@ from dataclasses import dataclass
 from Options import Choice, OptionSet, PerGameCommonOptions, Range, Toggle
 
 
-class ExpModifier(Range):
-    """
-    Percentage to apply to the received exp.
-    """
-    display_name = "Exp. Modifier"
-    internal_name = "exp_modifier"
-    range_start = 50
-    range_end = 1000
-    default = 100
-
 
 class Goal(OptionSet):
     """What bosses must be defeated for this world to goal. You can select however many you want, and only
@@ -81,6 +71,15 @@ class StartingMoney(Range):
     range_end = 99999999
     default = 1000
 
+class ExpModifier(Range):
+    """
+    Percentage to apply to the received exp.
+    """
+    display_name = "Exp. Modifier"
+    internal_name = "exp_modifier"
+    range_start = 50
+    range_end = 1000
+    default = 100
 
 class EventItems(Toggle):
     """
