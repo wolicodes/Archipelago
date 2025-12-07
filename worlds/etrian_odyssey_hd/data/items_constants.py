@@ -525,6 +525,7 @@ RARE_MEAT = "Rare Meat"
 FIRST_STRATUM_CLEARED = "First Stratum Cleared"
 VICTORY = "Victory"
 EN500 = "500en"
+EN400 = "400en"
 EN200 = "200en"
 EN100 = "100en"
 NIGHT_10TP = "Feeling Refreshed"
@@ -1067,6 +1068,7 @@ ITEM_NAME_TO_ID = {
     EN100: 1000005,
     EN50: 1000006,
     EN1: 1000007,
+    EN400: 100008
 }
 
 DEFAULT_ITEM_CLASSIFICATIONS = {
@@ -1560,8 +1562,8 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     RARE_BLOOM: ItemClassification.useful | ItemClassification.filler,
     GOLD_SEED: ItemClassification.useful | ItemClassification.filler,
     VOX_STONE: ItemClassification.useful | ItemClassification.filler,
-    CLEAR_KEY: ItemClassification.progression,
-    VIOLET_KEY: ItemClassification.progression,
+    CLEAR_KEY: ItemClassification.useful,
+    VIOLET_KEY: ItemClassification.useful,
     DRAGON_EGG: ItemClassification.useful | ItemClassification.filler,
     CARD_KEY: ItemClassification.useful | ItemClassification.filler,
     HOLY_GRAIL: ItemClassification.useful | ItemClassification.filler,
@@ -1594,6 +1596,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     FIRST_STRATUM_CLEARED: ItemClassification.progression,
     VICTORY: ItemClassification.progression,
     EN500: ItemClassification.filler,
+    EN400: ItemClassification.filler,
     EN200: ItemClassification.filler,
     EN100: ItemClassification.filler,
     EN50: ItemClassification.filler,

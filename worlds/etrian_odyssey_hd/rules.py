@@ -10,8 +10,9 @@ if TYPE_CHECKING:
 
 
 def set_all_rules(world: EOHDWorld) -> None:
-    set_all_entrance_rules(world)
-    set_completion_condition(world)
+    # set_all_entrance_rules(world)
+    # set_completion_condition(world)
+    print("no rule")
 
 
 def set_all_entrance_rules(world: EOHDWorld) -> None:
