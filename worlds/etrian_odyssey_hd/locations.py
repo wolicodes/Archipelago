@@ -13,14 +13,25 @@ class EOHDLocation(Location):
     game = "Etrian Odyssey HD"
 
 
-def get_region_locations(region_name: str, option: EOHDFlag = None) -> dict[str, int | None]:
-    return {
+all_locs = []
+
+def get_all_locations():
+    return all_locs
+    
+
+def get_region_locations(region_name: str, option: EOHDFlag = EOHDFlag.ALWAYS) -> dict[str, int | None]:
+    matching_locations = {
         location_name: data.id
         for location_name, data in LOCATION_DATA.items()
         if data.region == region_name
         and (option is None or (data.flags & option) == option)
         and data.event is None
     }
+
+    for entry in matching_locations.keys():
+        all_locs.append(entry)
+    # print("found " + str(len(matching_locations)) + " locations for " + region_name + " and options: " + str(option))
+    return matching_locations
 
 
 def create_all_locations(world: EOHDWorld) -> None:
@@ -30,19 +41,23 @@ def create_all_locations(world: EOHDWorld) -> None:
 
 def create_regular_locations(world: EOHDWorld) -> None:
     etria = world.get_region(reg.ETRIA)
-    b1f_main = world.get_region(reg.B1F_MAIN)
     b1f_clear_crystal_room = world.get_region(reg.B1F_CLEAR_CRYSTAL_ROOM)
     b1f_violet_crystal_room = world.get_region(reg.B1F_VIOLET_CRYSTAL_ROOM)
     b1f_east = world.get_region(reg.B1F_EAST)
-    # b2f = world.get_region(reg.B2F_MAIN)
 
-    etria.add_locations(get_region_locations(reg.ETRIA), EOHDLocation)
+    
     if world.options.shop_sanity:
         etria.add_locations(get_region_locations(reg.ETRIA, EOHDFlag.SHOP), EOHDLocation)
-    b1f_main.add_locations(get_region_locations(reg.B1F_MAIN), EOHDLocation)
-    b1f_clear_crystal_room.add_locations(get_region_locations(reg.B1F_CLEAR_CRYSTAL_ROOM), EOHDLocation)
-    b1f_violet_crystal_room.add_locations(get_region_locations(reg.B1F_VIOLET_CRYSTAL_ROOM), EOHDLocation)
-    b1f_east.add_locations(get_region_locations(reg.B1F_EAST), EOHDLocation)
+
+    # Main Path
+    etria.add_locations(get_region_locations(reg.ETRIA), EOHDLocation)
+    for data in reg.DG_MAIN:
+        floor = world.get_region(data)
+        floor.add_locations(get_region_locations(data), EOHDLocation)
+
+    # b1f_clear_crystal_room.add_locations(get_region_locations(reg.B1F_CLEAR_CRYSTAL_ROOM), EOHDLocation)
+    # b1f_violet_crystal_room.add_locations(get_region_locations(reg.B1F_VIOLET_CRYSTAL_ROOM), EOHDLocation)
+    # b1f_east.add_locations(get_region_locations(reg.B1F_EAST), EOHDLocation)
 
 
 def create_events(world: EOHDWorld) -> None:

@@ -23,3 +23,11 @@ ALL_REGIONS = [
     B4F_MAIN,
     B5F_MAIN
 ]
+
+DG_MAIN = [
+    B1F_MAIN,
+    B2F_MAIN,
+    B3F_MAIN,
+    B4F_MAIN,
+    B5F_MAIN
+]

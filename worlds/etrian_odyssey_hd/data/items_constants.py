@@ -1596,6 +1596,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     FIRST_STRATUM_CLEARED: ItemClassification.progression,
     VICTORY: ItemClassification.progression,
     EN500: ItemClassification.filler,
+    EN400: ItemClassification.filler,
     EN200: ItemClassification.filler,
     EN100: ItemClassification.filler,
     EN50: ItemClassification.filler,
