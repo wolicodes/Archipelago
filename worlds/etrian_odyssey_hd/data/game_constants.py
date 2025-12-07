@@ -1,4 +1,5 @@
-TREASURE_BOX_DATA = {
+EVENT_DATA = {
+    # Treasure Boxes
     "B1F Main - A3 Top Chest": 3585,
     "B1F Main - A3 Middle Chest": 3587,
     "B1F Main - A3 Bottom Chest": 3588,
@@ -27,5 +28,9 @@ TREASURE_BOX_DATA = {
     "B5F Main - E1 Right Chest": 3651,
     "B5F Main - E6 Chest": 3652,
     "B5F Main - B7 Chest": 3648,
-    "B5F Main - C7 Chest": 3649
+    "B5F Main - C7 Chest": 3649,
+
+    # Item Events (non missable)
+    "B1F Main - Event Red Fruit": 126,
+    "B1F Main - Moles Whitestone": 127
 }
