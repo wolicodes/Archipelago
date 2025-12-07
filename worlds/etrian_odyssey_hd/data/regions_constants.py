@@ -4,7 +4,11 @@ B1F_CLEAR_CRYSTAL_ROOM = "B1F Clear Crystal Room"
 B1F_VIOLET_CRYSTAL_ROOM = "B1F Violet Crystal Room"
 B1F_EAST = "B1F East"
 B2F_MAIN = "B2F Main"
+B2F_CLEAR_CRYSTAL_ROOM = "B2F Clear Crystal Room"
 B2F_SOUTH = "B2F South"
+B3F_MAIN = "B3F Main"
+B4F_MAIN = "B4F Main"
+B5F_MAIN = "B5F Main"
 
 ALL_REGIONS = [
     ETRIA,
@@ -13,5 +17,9 @@ ALL_REGIONS = [
     B1F_VIOLET_CRYSTAL_ROOM,
     B1F_EAST,
     B2F_MAIN,
+    B2F_CLEAR_CRYSTAL_ROOM,
     B2F_SOUTH,
+    B3F_MAIN,
+    B4F_MAIN,
+    B5F_MAIN
 ]
