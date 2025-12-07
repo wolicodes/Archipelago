@@ -5,11 +5,19 @@ from .data import game_constants
 from . import options
 import json
 
+
+
 def gen_dyndb():
     items = []
-    tables = {}
+    tables = { "Enemies" : [] }
 
     untreated = []
+
+    for enemy, id in game_constants.ENEMY_NAME_TO_ID.items():
+        tables["Enemies"].append({
+                "ID": id,
+                "LocationName": enemy
+            })
 
     for name, location in loc.LOCATION_DATA.items():
         table = ""
@@ -17,12 +25,12 @@ def gen_dyndb():
         locID = location.id
         items = []
 
-
         if name in game_constants.EVENT_DATA:
             table = "Flags"
             id = game_constants.EVENT_DATA[name]
             item = location.item is not None and itm.ITEM_NAME_TO_ID[location.item]
-            if item is not None:
+            # dont append items for chest because they are natively removed within the client
+            if not name.endswith('Chest') and item is not None:
                 items.append(item)
 
         # Shopsanity

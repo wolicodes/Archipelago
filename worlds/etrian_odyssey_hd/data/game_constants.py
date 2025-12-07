@@ -34,3 +34,24 @@ EVENT_DATA = {
     "B1F Main - Event Red Fruit": 126,
     "B1F Main - Moles Whitestone": 127
 }
+
+ENEMY_NAME_TO_ID = {
+    "Fenrir":       151,    # mewtwo!
+    "Cernunos":     101, 
+    "Royalant":     102,
+    "Cotrangl":     103,    # Corotrangul
+    "Iwaopeln":     104,    # Iwaoropenelep
+    "Ren":          113,
+    "Etreant":      105,
+    "Golem":        112,
+    "Wyvern":       100,
+    "Manticor":     111,
+    "Alraune":      108,
+    "Wyrm":         106,
+    "Drake":        107,
+    "Dragon":       110,
+    "Primevil":     109,
+    "Wyrmoid":      174,
+    "Drakoid":      175,
+    "Dragoid":      173,
+}
