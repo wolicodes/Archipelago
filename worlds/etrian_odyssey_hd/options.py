@@ -13,7 +13,7 @@ class Goal(OptionSet):
         - "Royalant"
         - "Cotrangl"
         - "Iwaopeln"
-        - "Ren and Tlachtga"
+        - "Ren" 
         - "Etreant"
         - "Golem"
         - "Wyvern"
@@ -23,7 +23,7 @@ class Goal(OptionSet):
         - "Drake"
         - "Dragon"
         - "Primevil"
-        - "Wrymoid"
+        - "Wyrmoid"
         - "Drakoid"
         - "Dragoid"
     """
@@ -33,7 +33,7 @@ class Goal(OptionSet):
         "Royalant",
         "Cotrangl",
         "Iwaopeln",
-        "Ren and Tlachtga",
+        "Ren",
         "Etreant",
         "Golem",
         "Wyvern",
@@ -43,7 +43,7 @@ class Goal(OptionSet):
         "Drake",
         "Dragon",
         "Primevil",
-        "Wrymoid",
+        "Wyrmoid",
         "Drakoid",
         "Dragoid",
     }

@@ -19,21 +19,26 @@ def create_all_regions(world: EOHDWorld) -> None:
     ]
     world.multiworld.regions += regions
 
-
 def connect_regions(world: EOHDWorld) -> None:
     etria = world.get_region(reg.ETRIA)
-    b1f = world.get_region(reg.B1F_MAIN)
-    b1f_clear_crystal_room = world.get_region(reg.B1F_CLEAR_CRYSTAL_ROOM)
-    b1f_violet_crystal_room = world.get_region(reg.B1F_VIOLET_CRYSTAL_ROOM)
-    b1f_east = world.get_region(reg.B1F_EAST)
-    b2f_main = world.get_region(reg.B2F_MAIN)
-    b2f_south = world.get_region(reg.B2F_SOUTH)
+    # b1f_clear_crystal_room = world.get_region(reg.B1F_CLEAR_CRYSTAL_ROOM)
+    # b1f_violet_crystal_room = world.get_region(reg.B1F_VIOLET_CRYSTAL_ROOM)
+    # b1f_east = world.get_region(reg.B1F_EAST)
 
-    etria.connect(b1f, ent.ENTER_THE_LABYRINTH)
-    b1f.connect(b1f_clear_crystal_room, ent.B1F_CLEAR_CRYSTAL_ROOM_ACCESS,
-                lambda state: state.has(itm.CLEAR_KEY, world.player))
-    b1f.connect(b1f_violet_crystal_room, ent.B1F_VIOLET_CRYSTAL_ROOM_ACCESS,
-                lambda state: state.has(itm.VIOLET_KEY, world.player))
-    b1f.connect(b1f_east, ent.B1F_EAST_ACCESS, lambda state: state.has(itm.FIRST_STRATUM_CLEARED, world.player))
-    b1f.connect(b2f_main, ent.B2F_ACCESS)
-    b2f_main.connect(b2f_south, ent.B2F_SOUTH_ACCESS, lambda state: state.has(itm.CLEAR_KEY, world.player))
+    etria.connect(world.get_region(reg.B1F_MAIN), ent.ENTER_THE_LABYRINTH)
+    for floor,data in enumerate(reg.DG_MAIN):
+        floor_reg = world.get_region(reg.DG_MAIN[floor])
+        if floor+1 < len(reg.DG_MAIN):
+            floor_next = world.get_region(reg.DG_MAIN[floor+1])
+            floor_reg.connect(floor_next, ent.FLOOR_ACCESS[floor])
+
+    # b2f_main = world.get_region(reg.B2F_MAIN)
+    # b2f_south = world.get_region(reg.B2F_SOUTH)
+
+    # b1f.connect(b1f_clear_crystal_room, ent.B1F_CLEAR_CRYSTAL_ROOM_ACCESS,
+    #             lambda state: state.has(itm.CLEAR_KEY, world.player))
+    # b1f.connect(b1f_violet_crystal_room, ent.B1F_VIOLET_CRYSTAL_ROOM_ACCESS,
+    #             lambda state: state.has(itm.VIOLET_KEY, world.player))
+    # b1f.connect(b1f_east, ent.B1F_EAST_ACCESS, lambda state: state.has(itm.FIRST_STRATUM_CLEARED, world.player))
+    # b1f.connect(b2f_main, ent.B2F_ACCESS)
+    # b2f_main.connect(b2f_south, ent.B2F_SOUTH_ACCESS, lambda state: state.has(itm.CLEAR_KEY, world.player))

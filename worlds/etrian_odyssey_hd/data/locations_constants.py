@@ -78,6 +78,30 @@ LOCATION_DATA: dict[str, EOHDLocationData] = {
     "B1F East - Ragelope Top Chest": EOHDLocationData(34, reg.B1F_EAST, itm.MEDICA_II, None, EOHDFlag.ALWAYS),
     "B1F East - Ragelope Middle Chest": EOHDLocationData(35, reg.B1F_EAST, itm.RAPIER, None, EOHDFlag.ALWAYS),
     "B1F East - Ragelope Bottom Chest": EOHDLocationData(36, reg.B1F_EAST, itm.EN500, None, EOHDFlag.ALWAYS),
+
+    # B2F
+    "B2F Main - A3 Chest": EOHDLocationData(37, reg.B2F_MAIN, itm.ARIADNE_THREAD, None, EOHDFlag.ALWAYS),
+    "B2F Main - C1 Chest": EOHDLocationData(38, reg.B2F_MAIN, itm.NECTAR, None, EOHDFlag.ALWAYS),
+    "B2F Main - A6 Chest": EOHDLocationData(39, reg.B2F_MAIN, itm.BUFFCOAT, None, EOHDFlag.ALWAYS),
+    "B2F Clear Crystal Room - Top Chest": EOHDLocationData(40, reg.B2F_CLEAR_CRYSTAL_ROOM, itm.MEDICA_IV, None, EOHDFlag.ALWAYS),
+    "B2F Clear Crystal Room - Bottom Chest": EOHDLocationData(41, reg.B2F_CLEAR_CRYSTAL_ROOM, itm.SOMA, None, EOHDFlag.ALWAYS),
+    # B3F
+    "B3F Main - Stalker Hallway Top Chest": EOHDLocationData(41, reg.B3F_MAIN, itm.EN400, None, EOHDFlag.ALWAYS),
+    "B3F Main - Stalker Hallway Middle Chest": EOHDLocationData(42, reg.B3F_MAIN, itm.MEDICA_III, None, EOHDFlag.ALWAYS),
+    "B3F Main - Stalker Hallway Bottom Chest": EOHDLocationData(43, reg.B3F_MAIN, itm.HIDE_BOOT, None, EOHDFlag.ALWAYS),
+    "B3F Main - F2 Chest": EOHDLocationData(44, reg.B3F_MAIN, itm.THERIACA_A, None, EOHDFlag.ALWAYS),
+    "B3F Main - F4 Chest": EOHDLocationData(45, reg.B3F_MAIN, itm.EN500, None, EOHDFlag.ALWAYS),
+    # B4F
+    "B4F Main - F2 Chest": EOHDLocationData(46, reg.B4F_MAIN, itm.BRAVANT, None, EOHDFlag.ALWAYS),
+    "B4F Main - Wolf Circling Chest": EOHDLocationData(47, reg.B4F_MAIN, itm.PLATE, None, EOHDFlag.ALWAYS),
+    "B4F Main - B3 Chest": EOHDLocationData(48, reg.B4F_MAIN, itm.MEDICA_II, None, EOHDFlag.ALWAYS),
+    "B4F Main - A1 Chest": EOHDLocationData(49, reg.B4F_MAIN, itm.AMRITA, None, EOHDFlag.ALWAYS),
+    # B5F
+    "B5F Main - E1 Left Chest": EOHDLocationData(50, reg.B5F_MAIN, itm.NECTAR_II, None, EOHDFlag.ALWAYS),
+    "B5F Main - E1 Right Chest": EOHDLocationData(51, reg.B5F_MAIN, itm.BRAVANT_II, None, EOHDFlag.ALWAYS),
+    "B5F Main - E6 Chest": EOHDLocationData(52, reg.B5F_MAIN, itm.BLAZE_OIL, None, EOHDFlag.ALWAYS),
+    "B5F Main - B7 Chest": EOHDLocationData(53, reg.B5F_MAIN, itm.AMRITA, None, EOHDFlag.ALWAYS),
+    "B5F Main - C7 Chest": EOHDLocationData(54, reg.B5F_MAIN, itm.BOAR_SPEAR, None, EOHDFlag.ALWAYS),
 }
 
 LOCATION_NAME_TO_ID = {

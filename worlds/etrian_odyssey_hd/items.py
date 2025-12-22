@@ -4,7 +4,7 @@ from typing import TYPE_CHECKING
 
 from BaseClasses import Item
 from .data import items_constants as itm, locations_constants as loc
-
+from . import locations
 if TYPE_CHECKING:
     from .world import EOHDWorld
 
@@ -27,12 +27,14 @@ def create_item_with_correct_classification(world: EOHDWorld, name: str) -> EOHD
 
 
 def create_all_items(world: EOHDWorld) -> None:
-    itempool: list[Item] = [
-        world.create_item(data.item)
-        for data in loc.LOCATION_DATA.values()
-        if data.item is not None
-    ]
+    itempool: list[Item] = []
 
+    all_locs = locations.get_all_locations()
+    for name in all_locs:
+        data = loc.LOCATION_DATA[name]
+        if data.item:
+            itempool.append(world.create_item(data.item))
+    
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
     needed_number_of_filler_items = number_of_unfilled_locations - number_of_items
