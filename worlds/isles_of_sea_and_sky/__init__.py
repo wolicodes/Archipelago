@@ -60,7 +60,7 @@ class IslesOfSeaAndSkySettings(Group):
         """Path to IslesOfSeaAndSky Vanilla data file"""
         description = "Isles Of Sea And Sky Vanilla File"
         md5s = [
-            "F24EFE2F28A3DB2B5E4EAA5294DCE25D" # steam, old 1.2b
+            "9B8A1EFD76095F0796CD5AA472DF1BD7" # steam, v2.6
             #"",  # epic
             # "",  # itch.io, does not work
             ]
@@ -205,8 +205,8 @@ class IslesOfSeaAndSkyWorld(World):
             gem_locations = {loc_name: loc_name.rsplit(" - ", 1)[-1]
                              for loc_name in advancement_table
                              if loc_name.rsplit(" - ", 1)[-1] in gem_names}
-            assert len(gem_locations) == 60, \
-                f"Expected 60 gem locations, found {len(gem_locations)}"
+            assert len(gem_locations) == 62, \
+                f"Expected 62 gem locations, found {len(gem_locations)}"
             for loc_name, gem in gem_locations.items():
                 self.multiworld.get_location(loc_name, self.player).place_locked_item(
                     self.create_item(gem))

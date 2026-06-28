@@ -10,23 +10,23 @@ class IslesOfSeaAndSkyAdvancement(Location):
     game: str = "Isles Of Sea And Sky"
 
 advancement_table = {
-    "Locked A0 - Ancient Rune Stone":               AdvData(104285, "Locked"),
-    "Stone C0 - Topaz Rune Stone":                  AdvData(108054, "Stony Cliffs"),
-    "Water C0 - Sapphire Rune Stone":               AdvData(110024, "Tidal Reef"),
-    "Fire C0 - Ruby Rune Stone":                    AdvData(116199, "Raging Volcano"),
-    "Wind C2 - Diamond Rune Stone":                 AdvData(121371, "Frozen Spire"),
-    "Serpent A1 - Obsidian Rune Stone":             AdvData(125695, "Serpent Stacks"),
+    "Locked A0 - Ancient Rune Stone":               AdvData(110763, "Locked"),
+    "Stone C0 - Topaz Rune Stone":                  AdvData(115141, "Stony Cliffs"),
+    "Water C0 - Sapphire Rune Stone":               AdvData(122936, "Tidal Reef"),
+    "Fire C0 - Ruby Rune Stone":                    AdvData(105659, "Raging Volcano"),
+    "Wind C2 - Diamond Rune Stone":                 AdvData(129503, "Frozen Spire"),
+    "Serpent A1 - Obsidian Rune Stone":             AdvData(112724, "Serpent Stacks"),
 
     "Stone C0 - Topaz Quest Complete":              AdvData(99901201, "Stony Cliffs"),
     "Water C0 - Sapphire Quest Complete":           AdvData(99903201, "Tidal Reef"),
     "Fire C0 - Ruby Quest Complete":                AdvData(99904201, "Raging Volcano"),
     "Wind C2 - Diamond Quest Complete":             AdvData(99905221, "Frozen Spire"),
+    "Serpent A1 - Obsidian Quest Complete":         AdvData(99908011, "Serpent Stacks Post-Rune"),
 
-    "Stone Dungeon C1 - Gopher Gloves":             AdvData(101774, "Stony Cliffs NW"),
-    "Water A4 - Frog Flippers":                     AdvData(126060, "Tidal Reef Post-Rune"),
-    "Fire E0 - Salamander Shirt":                   AdvData(118310, "Raging Volcano NE"),
-    "Wind A0 - Kite Cloak":                         AdvData(120221, "Frozen Spire Post-Rune"),
-    "Serpent A1 - Serpent Circlet":                 AdvData(156578, "Serpent Stacks Post-Rune"),
+    "Stone Dungeon C1 - Gopher Gloves":             AdvData(116940, "Stony Cliffs NW"),
+    "Water A4 - Frog Flippers":                     AdvData(121824, "Tidal Reef Post-Rune"),
+    "Fire E0 - Salamander Shirt":                   AdvData(107590, "Raging Volcano NE"),
+    "Wind A0 - Kite Cloak":                         AdvData(128532, "Frozen Spire Post-Rune"),
 
     "Sanctum A2 - Topaz Shard Hit":                 AdvData(99907021, "Sanctum"),
     "Sanctum C2 - Sapphire Shard Hit":              AdvData(99907221, "Sanctum"),
@@ -36,9 +36,9 @@ advancement_table = {
     "Stone E3 - Blue Stone Tablet":                 AdvData(134550, "Stony Cliffs Post-Rune"),
     "Stone Dungeon A1 - Gold Stone Tablet":         AdvData(134223, "Stony Cliffs Post-Rune"),
 
-    "Fire A4 - Fire Key":                           AdvData(117766, "Raging Volcano Post-Rune"),
-    "Fire A0 - Fire Key":                           AdvData(116592, "Raging Volcano Post-Rune"),
-    "Fire E4 - Fire Key":                           AdvData(117911, "Raging Volcano Post-Rune"),
+    "Fire A0 - Fire Key":                           AdvData(104110, "Raging Volcano Post-Rune"),
+    "Fire A4 - Fire Key":                           AdvData(104844, "Raging Volcano Post-Rune"),
+    "Fire E4 - Fire Key":                           AdvData(108285, "Raging Volcano Post-Rune"),
 
     #"1 - Egg":         AdvData(991024, "Frozen Spire"), #Broken due to in-game randomness
     #"2 - Egg":         AdvData(991025, "Frozen Spire"), #Broken due to in-game randomness
@@ -50,307 +50,339 @@ advancement_table = {
     "Aggro A1 - Big Bell Rung":                      AdvData(99910011, "Aggro Crag"),
     "Nunatak A1 - Big Bell Rung":                    AdvData(99911011, "Sea Nunatak"),
 
-    "Beast A0 - Phoenix Flute":                      AdvData(123533, "Beast Bridge"),
-    "Shoal A0 - Star Viewing Orb":                   AdvData(104389, "Shoal"),
+    "Beast A0 - Phoenix Flute":                      AdvData(103129, "Beast Bridge"),
+    "Shoal A0 - Star Viewing Orb":                   AdvData(113760, "Shoal"),
 
     # MISC
-    "Ancient B2 - Open Ancient Door":               AdvData(101288, "Sanctum"), # Placed in next region for logic
-    "Stone Dungeon C2 - Open Topaz Door":           AdvData(101864, "Stony Cliffs Post-Rune"),
+    "Ancient B2 - Open Ancient Door":               AdvData(101915, "Sanctum"), # Placed in next region for logic
+    "Stone Dungeon C2 - Open Topaz Door":           AdvData(117030, "Stony Cliffs Post-Rune"),
 
-    "Stone E1 - Tablet Puzzle Clue":                AdvData(107717, "Stony Cliffs Post-Rune"),
+    "Stone A1 - Tablet Puzzle Clue":                AdvData(114317, "Stony Cliffs NW"),
     "Stone A3 - Tablet Puzzle Clue":                AdvData(107386, "Stony Cliffs Post-Rune"),
-    "Stone A1 - Tablet Puzzle Clue":                AdvData(107497, "Stony Cliffs NW"),
+    "Stone E1 - Tablet Puzzle Clue":                AdvData(114400, "Stony Cliffs NW"),
 
-    "Stone Dungeon E3 - Tablet Puzzle Clue":        AdvData(125017, "Stony Cliffs Post-Rune"),
-    "Stone Dungeon A3 - Tablet Puzzle Clue":        AdvData(102677, "Stony Cliffs Post-Rune"),
-    "Stone Dungeon E1 - Tablet Puzzle Clue":        AdvData(125406, "Stony Cliffs"),
+    "Stone Dungeon A3 - Tablet Puzzle Clue":        AdvData(116312, "Stony Cliffs Post-Rune"),
+    "Stone Dungeon E1 - Tablet Puzzle Clue":        AdvData(117920, "Stony Cliffs"),
+    "Stone Dungeon E3 - Tablet Puzzle Clue":        AdvData(118019, "Stony Cliffs Post-Rune"),
 
-    "Beast A1 - Big Bell Stone":                    AdvData(123559, "Beast Bridge"),
-    "Sanctum B1 - Elemental Stone":                 AdvData(123976, "Sanctum Peak"),
+    "Beast A1 - Big Bell Stone":                    AdvData(103166, "Beast Bridge"),
+    "Sanctum B1 - Elemental Stone":                 AdvData(112317, "Sanctum Peak"),
 
     #
 
-    "Ancient B3 - Ancient Key":                     AdvData(100220, "Ancient Isle"),
-    "Ancient A1 - Ancient Key":                     AdvData(101047, "Ancient Isle"),
-    "Ancient A2 - SE - Ancient Key":                AdvData(100727, "Ancient Isle"),
-    "Ancient A3 - N - Ancient Key":                 AdvData(100547, "Ancient Isle"),
-    "Ancient A3 - S - Ancient Key":                 AdvData(100542, "Ancient Isle"),
-    "Ancient A3 - E - Ancient Key":                 AdvData(100538, "Ancient Isle"),
-    "Ancient C2 - Ancient Key":                     AdvData(100422, "Ancient Isle"),
-    "Ancient C3 - Ancient Key":                     AdvData(101433, "Ancient Isle"),
-    "Ancient C1 - Ancient Key":                     AdvData(100983, "Ancient Isle"),
-    "Ancient A2 - NW - Ancient Key":                AdvData(100730, "Ancient Isle"), # Topaz quest
+    "Ancient A1 - Ancient Key":                     AdvData(101600, "Ancient Isle"),
+    "Ancient A2 - SE - Ancient Key":                AdvData(101756, "Ancient Isle"),
+    "Ancient A2 - NW - Ancient Key":                AdvData(101759, "Ancient Isle"), # Topaz quest
+    "Ancient A3 - N - Ancient Key":                 AdvData(101814, "Ancient Isle"),
+    "Ancient A3 - S - Ancient Key":                 AdvData(101809, "Ancient Isle"),
+    "Ancient A3 - E - Ancient Key":                 AdvData(101805, "Ancient Isle"),
+    "Ancient B3 - Ancient Key":                     AdvData(101964, "Ancient Isle"),
+    "Ancient C1 - Ancient Key":                     AdvData(102078, "Ancient Isle"),
+    "Ancient C2 - Ancient Key":                     AdvData(102115, "Ancient Isle"),
+    "Ancient C3 - Ancient Key":                     AdvData(102274, "Ancient Isle"),
 
-    "Rolling A1 - Ancient Key":                     AdvData(104494, "Rolling Rocks"),
-    "Rolling A0 - Ancient Key":                     AdvData(103798, "Rolling Rocks"),  # 7 stars
+    "Rolling A0 - Ancient Key":                     AdvData(111788, "Rolling Rocks"),  # 7 stars
+    "Rolling A1 - Ancient Key":                     AdvData(111839, "Rolling Rocks"),
 
-    "Tropic A1 - Ancient Key":                      AdvData(104437, "Star Tropic"), # ancient rune
+    "Stone A2 - Ancient Key":                       AdvData(114393, "Stony Cliffs Post-Rune"), # blue & gold tablet
+    "Stone B0 - NW1 - Ancient Key":                 AdvData(114759, "Stony Cliffs NW"), # topaz quest
+    "Stone B0 - NW2 - Ancient Key":                 AdvData(114760, "Stony Cliffs NW"), # topaz quest
+    "Stone B0 - NW3 - Ancient Key":                 AdvData(114761, "Stony Cliffs NW"), # topaz quest
+    "Stone B1 - Ancient Key":                       AdvData(114820, "Stony Cliffs NW"), #
+    "Stone B2 - Ancient Key":                       AdvData(114956, "Stony Cliffs"),
+    "Stone B4 - Ancient Key":                       AdvData(115081, "Stony Cliffs Post-Rune"), #topaz quest, topaz rune
+    "Stone C0 - Ancient Key":                       AdvData(115139, "Stony Cliffs"), #topaz quest
+    "Stone D3 - Ancient Key":                       AdvData(115957, "Stony Cliffs Post-Rune"),  # topaz rune
+    "Stone E2 - Ancient Key":                       AdvData(118345, "Stony Cliffs Post-Rune"),  # r rune
+    
+    "Stone Dungeon B1 - Ancient Key":               AdvData(116456, "Stony Cliffs NW"), #gopher gloves
+    "Stone Dungeon C1 - Ancient Key":               AdvData(116955, "Stony Cliffs NW"), #topaz rune, gopher gloves
+    "Stone Dungeon D0 - Ancient Key":               AdvData(117316, "Stony Cliffs NW"), #gopher gloves
+    "Stone Dungeon D2 - Ancient Key":               AdvData(117734, "Stony Cliffs Post-Rune"), # t quest
+    "Stone Dungeon E2 - Ancient Key":               AdvData(118014, "Stony Cliffs Post-Rune"),
 
-    "Stone B1 - Ancient Key":                       AdvData(107038, "Stony Cliffs NW"), #
-    "Stone C0 - Ancient Key":                       AdvData(108052, "Stony Cliffs"), #topaz quest
-    "Stone B2 - Ancient Key":                       AdvData(107371, "Stony Cliffs"),
-    "Stone E2 - Ancient Key":                       AdvData(107665, "Stony Cliffs Post-Rune"),  # topaz rune
-    "Stone B4 - Ancient Key":                       AdvData(106963, "Stony Cliffs Post-Rune"), #topaz quest, topaz rune
-    "Stone Dungeon C1 - Ancient Key":               AdvData(101789, "Stony Cliffs NW"), #topaz rune, gopher gloves
-    "Stone Dungeon D0 - Ancient Key":               AdvData(124853, "Stony Cliffs NW"), #gopher gloves
-    "Stone Dungeon B1 - Ancient Key":               AdvData(124775, "Stony Cliffs NW"), #gopher gloves
-    "Stone B0 - NW1 - Ancient Key":                 AdvData(108008, "Stony Cliffs NW"), # topaz quest
-    "Stone B0 - NW2 - Ancient Key":                 AdvData(108009, "Stony Cliffs NW"), # topaz quest
-    "Stone B0 - NW3 - Ancient Key":                 AdvData(108010, "Stony Cliffs NW"), # topaz quest
-    "Stone Dungeon E2 - Ancient Key":               AdvData(102454, "Stony Cliffs Post-Rune"),
-
-    "Water C2 - Ancient Key":                       AdvData(108792, "Tidal Reef"),
+    "Water A0 - E - Ancient Key":                   AdvData(120256, "Tidal Reef Post-Rune"), # s rune
+    "Water A0 - S - Ancient Key":                   AdvData(120259, "Tidal Reef Post-Rune"), # frog flippers
+    "Water A2 - Ancient Key":                       AdvData(121503, "Tidal Reef Post-Rune"), # frog flippers, s quest
+    "Water B3 - Ancient Key":                       AdvData(122626, "Tidal Reef"), # frog flippers
+    "Water C0 - Ancient Key":                       AdvData(122928, "Tidal Reef"), # s quest
+    "Water C2 - Ancient Key":                       AdvData(123264, "Tidal Reef"),
     "Water C3 - W - Ancient Key":                   AdvData(108588, "Tidal Reef Post-Rune"), # s rune
-    "Water A0 - E - Ancient Key":                   AdvData(111567, "Tidal Reef Post-Rune"), # s rune
-    "Water A0 - S - Ancient Key":                   AdvData(111570, "Tidal Reef Post-Rune"), # frog flippers
-    "Water A2 - Ancient Key":                       AdvData(112439, "Tidal Reef Post-Rune"), # frog flippers, s quest
-    "Water B3 - Ancient Key":                       AdvData(110852, "Tidal Reef"), # frog flippers
-    "Water C3 - NE1 - Ancient Key":                 AdvData(108591, "Tidal Reef Post-Rune"), # frog flippers
-    "Water C3 - NE2 - Ancient Key":                 AdvData(108590, "Tidal Reef Post-Rune"), # frog flippers
-    "Water C3 - NE3 - Ancient Key":                 AdvData(108589, "Tidal Reef Post-Rune"), # frog flippers
-    "Water D1 - Ancient Key":                       AdvData(109878, "Tidal Reef"), # frog flippers
-    "Water D0 - Ancient Key":                       AdvData(110314, "Tidal Reef Post-Rune"), # frog flippers
-    "Water C0 - Ancient Key":                       AdvData(110016, "Tidal Reef"), # s quest
-    "Water D2 - Ancient Key":                       AdvData(109104, "Tidal Reef Post-Rune"), # frog flippers
+    "Water C3 - NE1 - Ancient Key":                 AdvData(123365, "Tidal Reef Post-Rune"), # frog flippers
+    "Water C3 - NE2 - Ancient Key":                 AdvData(123364, "Tidal Reef Post-Rune"), # frog flippers
+    "Water C3 - NE3 - Ancient Key":                 AdvData(123363, "Tidal Reef Post-Rune"), # frog flippers
+    "Water C3 - W - Ancient Key":                   AdvData(123362, "Tidal Reef Post-Rune"), # d rune
+    "Water D0 - Ancient Key":                       AdvData(123880, "Tidal Reef Post-Rune"), # frog flippers
+    "Water D1 - Ancient Key":                       AdvData(124055, "Tidal Reef"), # frog flippers
+    "Water D2 - Ancient Key":                       AdvData(124539, "Tidal Reef Post-Rune"), # frog flippers
+    "Water C4 - Ancient Key":                       AdvData(123545, "Tidal Reef Post-Rune"), # shell puzzle, f flippers
 
-    "Fire A2 - N - Ancient Key":                    AdvData(115234, "Raging Volcano"),
-    "Fire A2 - S - Ancient Key":                    AdvData(115239, "Raging Volcano"), # salamander shirt
-    "Fire B4 - Ancient Key":                        AdvData(118466, "Raging Volcano Post-Rune"), # r quest
-    "Fire A1 - NE - Ancient Key":                   AdvData(116437, "Raging Volcano Post-Rune"),
-    "Fire A1 - E - Ancient Key":                    AdvData(116431, "Raging Volcano Post-Rune"), # s shirt
-    "Fire B1 - N1 - Ancient Key":                   AdvData(116903, "Raging Volcano Post-Rune"), # r quest
-    "Fire B1 - N2 - Ancient Key":                   AdvData(116902, "Raging Volcano Post-Rune"), # r quest
-    "Fire B1 - N3 - Ancient Key":                   AdvData(116890, "Raging Volcano Post-Rune"), # r quest
-    "Fire C1 - NE - Ancient Key":                   AdvData(115684, "Raging Volcano Post-Rune"), # s shirt
-    "Fire C0 - Ancient Key":                        AdvData(116182, "Raging Volcano"), # r quest
-    "Fire C1 - SW - Ancient Key":                   AdvData(115696, "Raging Volcano"), # s shirt
-    "Fire C3 - Ancient Key":                        AdvData(116298, "Raging Volcano Post-Rune"), # r quest
-    "Fire A1 - S - Ancient Key":                    AdvData(116433, "Raging Volcano Post-Rune"), # r rune
-    "Fire D4 - Ancient Key":                        AdvData(118027, "Raging Volcano Post-Rune"),
+    "Sunken A0 - Ancient Key":                      AdvData(118749, "Sunken Island"),
+    "Sunken B0 - Ancient Key":                      AdvData(118911, "Sunken Island"),
+    
+    "Fire A1 - SE - Ancient Key":                   AdvData(104273, "Raging Volcano"), # s shirt
+    "Fire A1 - SW - Ancient Key":                   AdvData(104275, "Raging Volcano Post-Rune"), # t rune
+    "Fire A1 - NE - Ancient Key":                   AdvData(104279, "Raging Volcano Post-Rune"),
+    "Fire A2 - N - Ancient Key":                    AdvData(104370, "Raging Volcano"),
+    "Fire A2 - S - Ancient Key":                    AdvData(104375, "Raging Volcano"), # salamander shirt
+    "Fire B1 - N1 - Ancient Key":                   AdvData(105022, "Raging Volcano Post-Rune"), # r quest
+    "Fire B1 - N2 - Ancient Key":                   AdvData(105034, "Raging Volcano Post-Rune"), # r quest
+    "Fire B1 - N3 - Ancient Key":                   AdvData(105035, "Raging Volcano Post-Rune"), # r quest
+    "Fire B4 - Ancient Key":                        AdvData(105513, "Raging Volcano Post-Rune"), # r quest
+    "Fire C0 - Ancient Key":                        AdvData(105642, "Raging Volcano"), # r quest
+    "Fire C1 - NE - Ancient Key":                   AdvData(105959, "Raging Volcano Post-Rune"), # s shirt
+    "Fire C1 - SW - Ancient Key":                   AdvData(105971, "Raging Volcano"), # s shirt
+    "Fire C3 - Ancient Key":                        AdvData(106397, "Raging Volcano Post-Rune"), # r quest
+    "Fire D4 - Ancient Key":                        AdvData(107416, "Raging Volcano Post-Rune"), # idol puzzle
 
+    "Aggro B0 - W - Ancient Key":                   AdvData(101155, "Aggro Crag"),
+    "Aggro B0 - E - Ancient Key":                   AdvData(101156, "Aggro Crag"),
+    
     # Keys on the Frozen Spire may be broken due to in-game randomness
-    "Wind C4 - Ancient Key":                        AdvData(120170, "Frozen Spire"),
-    "Wind D4 - E - Ancient Key":                    AdvData(122397, "Frozen Spire Post-Rune"), # d rune
-    "Wind D4 - NW1 - Ancient Key":                  AdvData(122403, "Frozen Spire"), # d quest
-    "Wind D4 - NW2 - Ancient Key":                  AdvData(122404, "Frozen Spire"), # d quest
-    "Wind D4 - NW3 - Ancient Key":                  AdvData(122405, "Frozen Spire"), # d quest
-    "Wind D3 - Ancient Key":                        AdvData(120556, "Frozen Spire Post-Rune"), # k cloak
-    "Wind A3 - Ancient Key":                        AdvData(120834, "Frozen Spire Post-Rune"), # k cloak
-    "Wind C2 - Ancient Key":                        AdvData(121361, "Frozen Spire"), # d quest
-    "Wind B1 - Ancient Key":                        AdvData(120917, "Frozen Spire Post-Rune"), # double check req
-    "Wind E2 - NE - Ancient Key":                   AdvData(121665, "Frozen Spire Post-Rune"), # d quest
-    "Wind E2 - S - Ancient Key":                    AdvData(121664, "Frozen Spire"), # d quest
-    "Wind E4 - E - Ancient Key":                    AdvData(120277, "Frozen Spire Post-Rune"), # d rune
-    "Wind E4 - SW - Ancient Key":                   AdvData(120291, "Frozen Spire Post-Rune"), # k cloak, d quest
+    "Wind A1 - Ancient Key":                        AdvData(128595, "Frozen Spire Post-Rune"), # glyph puzzle
+    "Wind A3 - Ancient Key":                        AdvData(128755, "Frozen Spire Post-Rune"), # k cloak
+    "Wind B1 - Ancient Key":                        AdvData(128899, "Frozen Spire Post-Rune"), # double check req
+    "Wind C2 - Ancient Key":                        AdvData(129493, "Frozen Spire"), # d quest
+    "Wind C4 - Ancient Key":                        AdvData(129820, "Frozen Spire"),
+    "Wind D3 - Ancient Key":                        AdvData(130172, "Frozen Spire Post-Rune"), # k cloak
+    "Wind D4 - E - Ancient Key":                    AdvData(130293, "Frozen Spire Post-Rune"), # s rune
+    "Wind D4 - NW1 - Ancient Key":                  AdvData(130299, "Frozen Spire"), # d quest
+    "Wind D4 - NW2 - Ancient Key":                  AdvData(130300, "Frozen Spire"), # d quest
+    "Wind D4 - NW3 - Ancient Key":                  AdvData(130301, "Frozen Spire"), # d quest
+    "Wind E2 - S - Ancient Key":                    AdvData(130553, "Frozen Spire"), # d quest
+    "Wind E2 - NE - Ancient Key":                   AdvData(130554, "Frozen Spire Post-Rune"), # d quest
+    "Wind E4 - E - Ancient Key":                    AdvData(130879, "Frozen Spire Post-Rune"), # d rune
+    "Wind E4 - SW - Ancient Key":                   AdvData(130893, "Frozen Spire Post-Rune"), # k cloak, d quest
 
-    "Aggro B0 - E - Ancient Key":                   AdvData(122675, "Aggro Crag"),
-    "Aggro B0 - W - Ancient Key":                   AdvData(122674, "Aggro Crag"),
+    "Nunatak A1 - Ancient Key":                     AdvData(111254, "Sea Nunatak"), # ancient rune
+    "Nunatak B1 - Ancient Key":                     AdvData(111417, "Sea Nunatak"),
 
-    "Sunken B0 - Ancient Key":                      AdvData(123147, "Sunken Island"),
-    "Sunken A0 - Ancient Key":                      AdvData(123004, "Sunken Island"),
+    "Tropic A1 - Ancient Key":                      AdvData(119782, "Star Tropic"), # ancient rune
 
-    "Nunatak B1 - Ancient Key":                     AdvData(123315, "Sea Nunatak"),
-    "Nunatak A1 - Ancient Key":                     AdvData(123362, "Sea Nunatak"), # ancient rune
+    #77 keys
 
-    "Stone Dungeon D2 - Ancient Key":               AdvData(102289, "Stony Cliffs Post-Rune"), # t quest
-    "Stone A2 - Ancient Key":                       AdvData(106850, "Stony Cliffs Post-Rune"), # blue & gold tablet
-    #73 keys
+    "Stone B0 - Topaz":                             AdvData(114765, "Stony Cliffs NW"),
+    "Stone B1 - Topaz":                             AdvData(114825, "Stony Cliffs NW"),
+    "Stone B2 - Topaz":                             AdvData(114946, "Stony Cliffs Post-Rune"), #Rq: topaz quest
+    "Stone C0 - Topaz":                             AdvData(115138, "Stony Cliffs Post-Rune"),
+    "Stone C2 - W - Topaz":                         AdvData(115250, "Stony Cliffs Post-Rune"),
+    "Stone C2 - E - Topaz":                         AdvData(115253, "Stony Cliffs"),
+    "Stone C3 - N - Topaz":                         AdvData(115302, "Stony Cliffs"),
+    "Stone C3 - S - Topaz":                         AdvData(115306, "Stony Cliffs"),
+    "Stone D2 - Topaz":                             AdvData(115743, "Stony Cliffs"),
+    "Stone Dungeon C1 - Topaz":                     AdvData(116990, "Stony Cliffs NW"), #Rq: gopher gloves
+    "Rolling A0 - Topaz":                           AdvData(111791, "Rolling Rocks"), #Rq: topaz quest, 7 stars
+    "Tropic A1 - Topaz":                            AdvData(119795, "Star Tropic"), #Rq: ancient rune stone, all legendaries
 
-    "Stone D2 - Topaz":                             AdvData(107088, "Stony Cliffs"),
-    "Stone C2 - E - Topaz":                         AdvData(107587, "Stony Cliffs"),
-    "Stone C0 - Topaz":                             AdvData(108051, "Stony Cliffs Post-Rune"),
-    "Stone C3 - N - Topaz":                         AdvData(106886, "Stony Cliffs"),
-    "Stone C3 - S - Topaz":                         AdvData(106890, "Stony Cliffs"),
-    "Stone C2 - W - Topaz":                         AdvData(107584, "Stony Cliffs Post-Rune"),
-    "Stone B0 - Topaz":                             AdvData(108014, "Stony Cliffs NW"),
-    "Stone B1 - Topaz":                             AdvData(107043, "Stony Cliffs NW"),
-    "Stone B2 - Topaz":                             AdvData(107361, "Stony Cliffs Post-Rune"), #Rq: topaz quest
-    "Stone Dungeon C1 - Topaz":                     AdvData(101824, "Stony Cliffs NW"), #Rq: gopher gloves
-    "Rolling A0 - Topaz":                           AdvData(103801, "Rolling Rocks"), #Rq: topaz quest, 7 stars
-    "Tropic A1 - Topaz":                            AdvData(104450, "Star Tropic"), #Rq: ancient rune stone, all legendaries - serpent circlet,
+    "Water A1 - Sapphire":                          AdvData(121132, "Tidal Reef"), #frog flippers
+    "Water B2 - S - Sapphire":                      AdvData(122453, "Tidal Reef"),
+    "Water B2 - N - Sapphire":                      AdvData(122461, "Tidal Reef"),
+    "Water C0 - Sapphire":                          AdvData(122933, "Tidal Reef Post-Rune"), #sapphire rune stone #
+    "Water C2 - N - Sapphire":                      AdvData(123255, "Tidal Reef"),  # sapphire quest
+    "Water C2 - W - Sapphire":                      AdvData(123262, "Tidal Reef"),
+    "Water D1 - Sapphire":                          AdvData(124050, "Tidal Reef Post-Rune"), #s rune stone
+    "Water D2 - N - Sapphire":                      AdvData(124525, "Tidal Reef Post-Rune"),
+    "Water D2 - W - Sapphire":                      AdvData(124540, "Tidal Reef Post-Rune"), #s rune stone
+    "Water D3 - Sapphire":                          AdvData(124897, "Tidal Reef Post-Rune"), #s rune stone
+    "Sunken B0 - Sapphire":                         AdvData(118909, "Sunken Island"), #sapphire quest, 21 stars
+    "Tropic A1 - Sapphire":                         AdvData(119796, "Star Tropic"), # ancient rune stone, all legendaries
 
-    "Water C2 - W - Sapphire":                      AdvData(108790, "Tidal Reef"),
-    "Water B2 - S - Sapphire":                      AdvData(108964, "Tidal Reef"),
-    "Water B2 - N - Sapphire":                      AdvData(108970, "Tidal Reef"),
-    "Water D2 - N - Sapphire":                      AdvData(109090, "Tidal Reef Post-Rune"),
-    "Water C0 - Sapphire":                          AdvData(110021, "Tidal Reef Post-Rune"), #sapphire rune stone #
-    "Water D2 - W - Sapphire":                      AdvData(109105, "Tidal Reef Post-Rune"), #s rune stone
-    "Water D1 - Sapphire":                          AdvData(109873, "Tidal Reef Post-Rune"), #s rune stone
-    "Water D3 - Sapphire":                          AdvData(113108, "Tidal Reef Post-Rune"), #s rune stone
-    "Water C2 - N - Sapphire":                      AdvData(108783, "Tidal Reef"),  # sapphire quest
-    "Water A1 - Sapphire":                          AdvData(111264, "Tidal Reef"), #frog flippers
-    "Sunken B0 - Sapphire":                         AdvData(123145, "Sunken Island"), #sapphire quest, 21 stars
-    "Tropic A1 - Sapphire":                         AdvData(104451, "Star Tropic"), # ancient rune stone, all legendaries except serpent circlet
+    "Fire A3 - N - Ruby":                           AdvData(104682, "Raging Volcano Post-Rune"),
+    "Fire A3 - S - Ruby":                           AdvData(104683, "Raging Volcano Post-Rune"), #r rune stone
+    "Fire A3 - NW - Ruby":                          AdvData(104692, "Raging Volcano Post-Rune"), # r rune stone
+    "Fire B2 - Ruby":                               AdvData(105144, "Raging Volcano"),
+    "Fire C0 - Ruby":                               AdvData(105644, "Raging Volcano Post-Rune"), # ruby rune stone
+    "Fire C2 - Ruby":                               AdvData(106310, "Raging Volcano"),
+    "Fire D0 - Ruby":                               AdvData(106667, "Raging Volcano NE"),
+    "Fire D1 - Ruby":                               AdvData(106839, "Raging Volcano Post-Rune"), # ruby rune stone
+    "Fire D2 - E - Ruby":                           AdvData(106948, "Raging Volcano"),
+    "Fire D2 - W - Ruby":                           AdvData(106952, "Raging Volcano"),
+    "Aggro B1 - Ruby":                              AdvData(101275, "Aggro Crag"), # ruby quest, 35 stars
+    "Tropic A1 - Ruby":                             AdvData(119797, "Star Tropic"), # ancient rune stone, all legendaries
 
-    "Fire B2 - Ruby":                               AdvData(115353, "Raging Volcano"),
-    "Fire C2 - Ruby":                               AdvData(115497, "Raging Volcano"),
-    "Fire C0 - Ruby":                               AdvData(116184, "Raging Volcano Post-Rune"), # ruby rune stone
-    "Fire D2 - E - Ruby":                           AdvData(115797, "Raging Volcano"),
-    "Fire D2 - W - Ruby":                           AdvData(115801, "Raging Volcano"),
-    "Fire D1 - Ruby":                               AdvData(115980, "Raging Volcano Post-Rune"), # ruby rune stone
-    "Fire A3 - S - Ruby":                           AdvData(116763, "Raging Volcano Post-Rune"), #r rune stone
-    "Fire A3 - N - Ruby":                           AdvData(116762, "Raging Volcano Post-Rune"),
-    "Fire A3 - NW - Ruby":                          AdvData(116772, "Raging Volcano Post-Rune"), # r rune stone
-    "Fire D0 - Ruby":                               AdvData(117604, "Raging Volcano NE"),
-    "Aggro B1 - Ruby":                              AdvData(122848, "Aggro Crag"), # ruby quest, 35 stars
-    "Tropic A1 - Ruby":                             AdvData(104452, "Star Tropic"), # ancient rune stone, all legendaries - serpent circlet
+    "Wind B2 - Diamond":                            AdvData(128972, "Frozen Spire"),
+    "Wind C1 - W - Diamond":                        AdvData(129385, "Frozen Spire Post-Rune"), # d rune stone
+    "Wind C1 - E - Diamond":                        AdvData(129392, "Frozen Spire Post-Rune"), # d rune stone
+    "Wind C2 - Diamond":                            AdvData(129491, "Frozen Spire Post-Rune"), # diamond rune stone
+    "Wind C3 - Diamond":                            AdvData(129589, "Frozen Spire Post-Rune"), # diamond quest complete
+    "Wind C4 - Diamond":                            AdvData(129821, "Frozen Spire"),
+    "Wind D1 - E - Diamond":                        AdvData(129927, "Frozen Spire Post-Rune"), # d rune stone
+    "Wind D1 - W - Diamond":                        AdvData(129931, "Frozen Spire Post-Rune"), # d rune stone
+    "Wind D2 - Diamond":                            AdvData(130100, "Frozen Spire"),
+    "Wind D4 - Diamond":                            AdvData(130292, "Frozen Spire Post-Rune"),
+    "Nunatak B0 - Diamond":                         AdvData(111354, "Sea Nunatak"), # diamond quest complete
+    "Tropic A1 - Diamond":                          AdvData(119798, "Star Tropic"), # ancient rune stone, all legendaries
 
-    "Wind C4 - Diamond":                            AdvData(120171, "Frozen Spire"),
-    "Wind D4 - Diamond":                            AdvData(122396, "Frozen Spire Post-Rune"),
-    "Wind B2 - Diamond":                            AdvData(120989, "Frozen Spire"),
-    "Wind D2 - Diamond":                            AdvData(121523, "Frozen Spire"),
-    "Wind C2 - Diamond":                            AdvData(121359, "Frozen Spire Post-Rune"), # diamond rune stone
-    "Wind C1 - W - Diamond":                        AdvData(121254, "Frozen Spire Post-Rune"), # d rune stone
-    "Wind C1 - E - Diamond":                        AdvData(121261, "Frozen Spire Post-Rune"), # d rune stone
-    "Wind D1 - W - Diamond":                        AdvData(121444, "Frozen Spire Post-Rune"), # d rune stone
-    "Wind D1 - E - Diamond":                        AdvData(121440, "Frozen Spire Post-Rune"), # d rune stone
-    "Wind C3 - Diamond":                            AdvData(120634, "Frozen Spire Post-Rune"), # diamond quest complete
-    "Nunatak B0 - Diamond":                         AdvData(123471, "Sea Nunatak"), # diamond quest complete
-    "Tropic A1 - Diamond":                          AdvData(104453, "Star Tropic"), # ancient rune stone, all legendaries - serpent circlet
+    "Stone A2 - Obsidian":                          AdvData(114394, "Stony Cliffs Post-Rune"),  # stone tablet blue, tablet golda
+    "Stone D1 - Obsidian":                          AdvData(115696, "Stony Cliffs"),
+    "Water C4 - Obsidian":                          AdvData(123544, "Tidal Reef Post-Rune"),  # shell puzzle, f flippers
+    "Water D0 - Obsidian":                          AdvData(123883, "Tidal Reef Post-Rune"),  # frog flippers
+    "Fire D4 - Obsidian":                           AdvData(107417, "Raging Volcano Post-Rune"),  # idol puzzle
+    "Fire E0 - Obsidian":                           AdvData(107591, "Raging Volcano Post-Rune"),  # salamander shirt
+    "Wind B0 - Obsidian":                           AdvData(128820, "Frozen Spire"),
+    "Wind A1 - Obsidian":                           AdvData(128596, "Frozen Spire Post-Rune"), # Glyph Puzzle
+    "Rolling A1 - Obsidian":                        AdvData(111841, "Rolling Rocks"),  # gopher gloves, 7 stars
+    "Sunken A0 - Obsidian":                         AdvData(118750, "Sunken Island"),  # frog flippers
+    "Aggro B0 - Obsidian":                          AdvData(101152, "Aggro Crag"),  # salamander shirt
+    "Nunatak B1 - Obsidian":                        AdvData(111418, "Sea Nunatak"),  # diamond quest
+    "Serpent A1 - Obsidian":                        AdvData(112731, "Serpent Stacks Post-Rune"),  # rune stones: t,s,r,d,o, o quest(?)
+    "Lost A1 - Obsidian":                           AdvData(110983, "Lost Landing"),  # phoenix flute (or secret find?)
 
-    "Rolling A1 - Obsidian":                        AdvData(104496, "Rolling Rocks"),  # gopher gloves, 7 stars
-    "Stone D1 - Obsidian":                          AdvData(107156, "Stony Cliffs"),
-    "Stone A2 - Obsidian":                          AdvData(106851, "Stony Cliffs Post-Rune"),  # DOUBLE CHECK ID # stone tablet blue, tablet golda
-    "Water D0 - Obsidian":                          AdvData(110317, "Tidal Reef Post-Rune"),  # frog flippers
-    "Fire E0 - Obsidian":                           AdvData(118311, "Raging Volcano Post-Rune"),  # salamander shirt
-    "Fire D4 - Obsidian":                           AdvData(118028, "Raging Volcano Post-Rune"),  # DOUBLE CHECK ID #
-    "Wind B0 - Obsidian":                           AdvData(120363, "Frozen Spire"),
-    "Aggro B0 - Obsidian":                          AdvData(122671, "Aggro Crag"),  # salamander shirt
-    "Sunken A0 - Obsidian":                         AdvData(123005, "Sunken Island"),  # frog flippers
-    "Nunatak B1 - Obsidian":                        AdvData(123316, "Sea Nunatak"),  # diamond quest
-    "Serpent A1 - Obsidian":                        AdvData(125702, "Serpent Stacks Post-Rune"),  # rune stones: t,s,r,d,o, serpent circlet(?)
-    "Lost A1 - Obsidian":                           AdvData(127285, "Lost Landing"),  # phoenix flute (or secret find?)
+    # All 120 Star Pieces are locations!
+    "Ancient A1 - Star Piece":                      AdvData(101601, "Ancient Isle"),
+    "Ancient B1 - Star Piece":                      AdvData(101881, "Ancient Isle"),
+    "Ancient C0 - Star Piece":                      AdvData(102041, "Ancient Isle"),
 
-    # All 109 Star Pieces are now locations!
-    "Ancient C0 - Star Piece":                      AdvData(100145, "Ancient Isle"),
-    "Ancient A1 - Star Piece":                      AdvData(101048, "Ancient Isle"),
-    "Ancient B1 - Star Piece":                      AdvData(100250, "Ancient Isle"),
-
-    "Stone C1 - Star Piece":                        AdvData(107477, "Stony Cliffs"), # t quest
-    "Stone E1 - Star Piece":                        AdvData(107757, "Stony Cliffs"),
-    "Stone B2 - Star Piece":                        AdvData(107364, "Stony Cliffs Post-Rune"), # t quest
-    "Stone B3 - Star Piece":                        AdvData(108106, "Stony Cliffs Post-Rune"), # t quest
-    "Stone B4 - Star Piece":                        AdvData(106970, "Stony Cliffs Post-Rune"), # g globes t quest
-    "Stone C4 - Star Piece":                        AdvData(107253, "Stony Cliffs Post-Rune"), # g gloves t quest
-    "Stone E4 - Star Piece":                        AdvData(107811, "Stony Cliffs Post-Rune"),
-    "Stone C0 - Star Piece":                        AdvData(108057, "Stony Cliffs"), # t quest
-    "Stone Dungeon E1 - Star Piece":                AdvData(125464, "Stony Cliffs Post-Rune"), # t quest
-    "Stone Dungeon E2 - Star Piece":                AdvData(102456, "Stony Cliffs Post-Rune"), # g gloves, f flippers
-    "Stone Dungeon C3 - Star Piece":                AdvData(101720, "Stony Cliffs Post-Rune"), # t quest
-    "Stone Dungeon C1 - Star Piece":                AdvData(101817, "Stony Cliffs NW"), # g gloves
-    "Stone Dungeon B1 - Star Piece":                AdvData(124770, "Stony Cliffs NW"), # g gloves
-    "Stone A1 - Star Piece":                        AdvData(107547, "Stony Cliffs NW"), # 5 stars
+    "Stone A1 - Star Piece":                        AdvData(114367, "Stony Cliffs NW"), # 5 stars
+    "Stone B2 - Star Piece":                        AdvData(114949, "Stony Cliffs Post-Rune"), # t quest
+    "Stone B3 - Star Piece":                        AdvData(115012, "Stony Cliffs Post-Rune"), # t quest
+    "Stone B4 - Star Piece":                        AdvData(115088, "Stony Cliffs Post-Rune"), # g globes t quest
+    "Stone C0 - Star Piece":                        AdvData(115144, "Stony Cliffs"), # t quest
+    "Stone C1 - Star Piece":                        AdvData(115196, "Stony Cliffs"), # t quest
+    "Stone C4 - Star Piece":                        AdvData(115360, "Stony Cliffs Post-Rune"), # g gloves t quest
+    "Stone D3 - N - Star Piece":                    AdvData(115940, "Stony Cliffs Post-Rune"), # 20 star pieces, t quest, d quest. g gloves
+    "Stone D3 - S - Star Piece":                    AdvData(115941, "Stony Cliffs Post-Rune"), # 20 star pieces, t quest, d quest
+    "Stone E1 - Star Piece":                        AdvData(118305, "Stony Cliffs"),
+    "Stone E4 - Star Piece":                        AdvData(118468, "Stony Cliffs Post-Rune"),
+    "Stone Dungeon B1 - Star Piece":                AdvData(116451, "Stony Cliffs NW"), # g gloves
+    "Stone Dungeon C1 - Star Piece":                AdvData(116983, "Stony Cliffs NW"), # g gloves
+    "Stone Dungeon C3 - Star Piece":                AdvData(117242, "Stony Cliffs Post-Rune"), # t quest
+    "Stone Dungeon E1 - Star Piece":                AdvData(117978, "Stony Cliffs Post-Rune"), # t quest
+    "Stone Dungeon E2 - Star Piece":                AdvData(118016, "Stony Cliffs Post-Rune"), # g gloves, f flippers
 
     "Stone D1 - Music Puzzle Star Piece 1":         AdvData(99901311, "Stony Cliffs"), # t rune, t quest, ancient key
     "Stone D1 - Music Puzzle Star Piece 2":         AdvData(99901312, "Stony Cliffs"), # t rune, t quest, ancient key
     "Stone D1 - Music Puzzle Star Piece 3":         AdvData(99901313, "Stony Cliffs"), # t rune, t quest, ancient key
     "Stone A2 - Tablet Puzzle Star Piece":          AdvData(99901021, "Stony Cliffs Post-Rune"), # blue & gold tablet
 
-    "Water C1 - E - Star Piece":                    AdvData(109452, "Tidal Reef"),
-    "Water C0 - Star Piece":                        AdvData(110017, "Tidal Reef"), # s quest
-    "Water C1 - W - Star Piece":                    AdvData(109440, "Tidal Reef"),
-    "Water C2 - Star Piece":                        AdvData(108791, "Tidal Reef"), # s quest
-    "Water D2 - Star Piece":                        AdvData(109108, "Tidal Reef Post-Rune"), # f flippers, k cloak
-    "Water D3 - Star Piece":                        AdvData(113112, "Tidal Reef Post-Rune"), # f flippers | Double check
-    "Water E2 - Star Piece":                        AdvData(113306, "Tidal Reef Post-Rune"), # f flippers
-    "Water E0 - W - Star Piece":                    AdvData(110696, "Tidal Reef Post-Rune"), # f flippers
-    "Water E0 - E - Star Piece":                    AdvData(110700, "Tidal Reef Post-Rune"), # s quest | double check
-    "Water B1 - Star Piece":                        AdvData(109688, "Tidal Reef"), # f flippers
-    "Water A0 - Star Piece":                        AdvData(111569, "Tidal Reef Post-Rune"), # s rune
-    "Water A2 - N - Star Piece":                    AdvData(112442, "Tidal Reef Post-Rune"), # f flippers s quest || k cloak
-    "Water A2 - S - Star Piece":                    AdvData(112438, "Tidal Reef Post-Rune"), # f flippers
-    "Water A4 - Star Piece":                        AdvData(126061, "Tidal Reef S"), # f flippers
-    "Water B4 - Star Piece":                        AdvData(126136, "Tidal Reef S"),
+    "Water A0 - Star Piece":                        AdvData(120258, "Tidal Reef Post-Rune"), # s rune
+    "Water A2 - S - Star Piece":                    AdvData(121502, "Tidal Reef Post-Rune"), # f flippers
+    "Water A2 - N - Star Piece":                    AdvData(121506, "Tidal Reef Post-Rune"), # f flippers s quest || k cloak
+    "Water A4 - Star Piece":                        AdvData(121825, "Tidal Reef S"), # f flippers
+    "Water B1 - Star Piece":                        AdvData(122276, "Tidal Reef"), # f flippers
+    "Water B4 - Star Piece":                        AdvData(122808, "Tidal Reef S"),
+    "Water C0 - Star Piece":                        AdvData(122929, "Tidal Reef"), # s quest
+    "Water C1 - W - Star Piece":                    AdvData(123036, "Tidal Reef"),
+    "Water C1 - E - Star Piece":                    AdvData(123048, "Tidal Reef"),
+    "Water C2 - Star Piece":                        AdvData(123263, "Tidal Reef"), # s quest
+    "Water D2 - Star Piece":                        AdvData(124543, "Tidal Reef Post-Rune"), # f flippers, s shirt
+    "Water D3 - Star Piece":                        AdvData(124901, "Tidal Reef Post-Rune"), # f flippers | Double check
+    "Water E0 - W - Star Piece":                    AdvData(126462, "Tidal Reef Post-Rune"), # f flippers
+    "Water E0 - E - Star Piece":                    AdvData(126466, "Tidal Reef Post-Rune"), # s quest | double check
+    "Water E2 - Star Piece":                        AdvData(126800, "Tidal Reef Post-Rune"), # f flippers
+    "Water E3 - NE - Star Piece":                   AdvData(128308, "Tidal Reef Post-Rune"), # s quest, t quest
+    "Water E3 - SW - Star Piece":                   AdvData(128317, "Tidal Reef Post-Rune"), # s quest, t quest
 
     "Water B0 - Music Puzzle Star Piece 1":         AdvData(99903101, "Tidal Reef Post-Rune"), # s quest
     "Water B0 - Music Puzzle Star Piece 2":         AdvData(99903102, "Tidal Reef Post-Rune"), # s quest
     "Water B0 - Music Puzzle Star Piece 3":         AdvData(99903103, "Tidal Reef Post-Rune"), # s quest
+    "Water C4 - Shell Puzzle Star Piece":           AdvData(99903241, "Tidal Reef Post-Rune"), # shell puzzle, f flippers
 
-    "Fire B4 - Star Piece":                         AdvData(118454, "Raging Volcano Post-Rune"), # r quest
-    "Fire B3 - Star Piece":                         AdvData(118779, "Raging Volcano Post-Rune"),
-    "Fire C3 - Star Piece":                         AdvData(116299, "Raging Volcano Post-Rune"),
-    "Fire C1 - Star Piece":                         AdvData(115680, "Raging Volcano"),
-    "Fire C0 - Star Piece":                         AdvData(116181, "Raging Volcano"),
-    "Fire D1 - S - Star Piece":                     AdvData(115983, "Raging Volcano"), # r quest
-    "Fire D1 - N - Star Piece":                     AdvData(115987, "Raging Volcano Post-Rune"), # r rune
-    "Fire D3 - S - Star Piece":                     AdvData(119006, "Raging Volcano Post-Rune"), # r quest | double check
-    "Fire D3 - W - Star Piece":                     AdvData(119008, "Raging Volcano Post-Rune"), # r quest | double
-    "Fire D4 - Star Piece":                         AdvData(118016, "Raging Volcano Post-Rune"), # f flippers # s shirt?
-    "Fire E3 - Star Piece":                         AdvData(119106, "Raging Volcano Post-Rune"),
-    "Fire E1 - E - Star Piece":                     AdvData(118578, "Raging Volcano Post-Rune"), # r quest shirt
-    "Fire E1 - W - Star Piece":                     AdvData(118588, "Raging Volcano Post-Rune"), # s shirt
-    "Fire E0 - Star Piece":                         AdvData(118314, "Raging Volcano NE"), # s shirt
+    "Fire B3 - Star Piece":                         AdvData(105356, "Raging Volcano Post-Rune"),
+    "Fire B4 - Star Piece":                         AdvData(105501, "Raging Volcano Post-Rune"), # r quest
+    "Fire C0 - Star Piece":                         AdvData(105641, "Raging Volcano"),
+    "Fire C1 - Star Piece":                         AdvData(105955, "Raging Volcano"),
+    "Fire C3 - Star Piece":                         AdvData(106398, "Raging Volcano Post-Rune"),
+    "Fire D1 - S - Star Piece":                     AdvData(106842, "Raging Volcano"), # r quest
+    "Fire D1 - N - Star Piece":                     AdvData(106846, "Raging Volcano Post-Rune"), # r rune
+    "Fire D3 - S - Star Piece":                     AdvData(107301, "Raging Volcano Post-Rune"), # r quest | double check
+    "Fire D3 - W - Star Piece":                     AdvData(107303, "Raging Volcano Post-Rune"), # r quest | double
+    "Fire D4 - Star Piece":                         AdvData(107405, "Raging Volcano Post-Rune"), # r quest, s shirt, k cloak
+    "Fire E0 - Star Piece":                         AdvData(107594, "Raging Volcano NE"), # s shirt
+    "Fire E1 - E - Star Piece":                     AdvData(107693, "Raging Volcano Post-Rune"), # r quest shirt
+    "Fire E1 - W - Star Piece":                     AdvData(107703, "Raging Volcano Post-Rune"), # s shirt
+    "Fire E3 - S - Star Piece":                     AdvData(108147, "Raging Volcano Post-Rune"), # r quest, s quest
+    "Fire E3 - SE - Star Piece":                    AdvData(108148, "Raging Volcano Post-Rune"), # r quest, s quest
+    "Fire E3 - W - Star Piece":                     AdvData(108150, "Raging Volcano Post-Rune"),
 
     "Fire B3 - Music Puzzle Star Piece 1":         AdvData(99904131, "Raging Volcano Post-Rune"), # r quest
     "Fire B3 - Music Puzzle Star Piece 2":         AdvData(99904132, "Raging Volcano Post-Rune"), # r quest
     "Fire B3 - Music Puzzle Star Piece 3":         AdvData(99904133, "Raging Volcano Post-Rune"), # r quest
-    "Fire D4 - Statue Puzzle Star Piece":          AdvData(99904341, "Raging Volcano Post-Rune"),
+    "Fire D4 - Idol Puzzle Star Piece":            AdvData(99904341, "Raging Volcano Post-Rune"), # idol puzzle
 
-    #locations might be broken due to in-game randomness
-    "Wind D4 - Star Piece":                         AdvData(122399, "Frozen Spire"),
-    "Wind C3 - W - Star Piece":                     AdvData(120638, "Frozen Spire"), # d rune
-    "Wind C3 - NE - Star Piece":                    AdvData(120631, "Frozen Spire"), # d rune
-    "Wind B3 - Star Piece":                         AdvData(121097, "Frozen Spire Post-Rune"), # k cloak
-    "Wind A3 - Star Piece":                         AdvData(120833, "Frozen Spire"), # k cloak
-    "Wind B2 - N - Star Piece":                     AdvData(120998, "Frozen Spire Post-Rune"), # k cloak?
-    "Wind C2 - Star Piece":                         AdvData(121360, "Frozen Spire"), # d quest
-    "Wind D2 - Star Piece":                         AdvData(121525, "Frozen Spire Post-Rune"), # k cloak
-    "Wind E2 - Star Piece":                         AdvData(121656, "Frozen Spire"), # d quest
-    "Wind E4 - Star Piece":                         AdvData(120280, "Frozen Spire Post-Rune"), # k cloak
-    "Wind E1 - Star Piece":                         AdvData(121560, "Frozen Spire Post-Rune"), # k cloak, g gloves
-    "Wind B1 - Star Piece":                         AdvData(120916, "Frozen Spire"),
-    "Wind B0 - Star Piece":                         AdvData(120361, "Frozen Spire Post-Rune"),
-    "Wind A0 - Star Piece":                         AdvData(120219, "Frozen Spire Post-Rune"), # k cloak
-    "Wind B2 - S - Star Piece":                     AdvData(120995, "Frozen Spire Post-Rune"),
+    # locations might be broken due to in-game randomness
+    "Wind A0 - Star Piece":                         AdvData(128530, "Frozen Spire Post-Rune"), # k cloak
+    "Wind A3 - Star Piece":                         AdvData(128754, "Frozen Spire"), # k cloak
+    "Wind B0 - Star Piece":                         AdvData(128818, "Frozen Spire Post-Rune"),
+    "Wind B1 - Star Piece":                         AdvData(128898, "Frozen Spire"),
+    "Wind B2 - S - Star Piece":                     AdvData(128978, "Frozen Spire Post-Rune"),
+    "Wind B2 - N - Star Piece":                     AdvData(128981, "Frozen Spire Post-Rune"), # k cloak?
+    "Wind B3 - Star Piece":                         AdvData(129182, "Frozen Spire Post-Rune"), # k cloak
+    "Wind C2 - Star Piece":                         AdvData(129492, "Frozen Spire"), # d quest
+    "Wind C3 - NE - Star Piece":                    AdvData(129586, "Frozen Spire"), # d rune
+    "Wind C3 - SW - Star Piece":                    AdvData(129593, "Frozen Spire"), # d rune
+    "Wind D2 - Star Piece":                         AdvData(130102, "Frozen Spire Post-Rune"), # k cloak
+    "Wind D4 - Star Piece":                         AdvData(130295, "Frozen Spire"),
+    "Wind E1 - W - Star Piece":                     AdvData(130419, "Frozen Spire Post-Rune"), # k cloak, g gloves
+    "Wind E1 - SE - Star Piece":                    AdvData(130436, "Frozen Spire Post-Rune"), # d quest, r quest
+    "Wind E1 - SW - Star Piece":                    AdvData(130437, "Frozen Spire Post-Rune"), # d quest, r quest
+    "Wind E2 - Star Piece":                         AdvData(130545, "Frozen Spire"), # d quest
+    "Wind E4 - Star Piece":                         AdvData(130882, "Frozen Spire Post-Rune"), # k cloak
 
     "Wind B4 - Music Puzzle Star Piece 1":         AdvData(99905141, "Frozen Spire Post-Rune"), # d quest
     "Wind B4 - Music Puzzle Star Piece 2":         AdvData(99905142, "Frozen Spire Post-Rune"), # d quest
     "Wind B4 - Music Puzzle Star Piece 3":         AdvData(99905143, "Frozen Spire Post-Rune"), # d quest
+    "Wind A1 - Glyph Puzzle Star Piece":           AdvData(99905011, "Frozen Spire Post-Rune"), # glyph puzzle
 
-    "Rolling A0 - Star Piece":                      AdvData(103803, "Rolling Rocks"), # 7 stars, t quest
-    "Rolling B1 - Star Piece":                      AdvData(104766, "Rolling Rocks Post-Rune"), #
-    "Rolling B0 - Star Piece":                      AdvData(104884, "Rolling Rocks Post-Rune"), # g gloves
+    "Rolling A0 - Star Piece":                      AdvData(111793, "Rolling Rocks"), # 7 stars, t quest
+    "Rolling B0 - Star Piece":                      AdvData(111892, "Rolling Rocks Post-Rune"), # g gloves
+    "Rolling B1 - Star Piece":                      AdvData(111985, "Rolling Rocks Post-Rune"), #
     "Rolling B0 - Big Bell Star Piece":             AdvData(99908102, "Ancient Isle"), # rolling big bell
 
-    "Sunken B0 - Star Piece":                       AdvData(123146, "Sunken Island"), # 21 stars, s quest
-    "Sunken A1 - Star Piece":                       AdvData(123082, "Sunken Island"), # ancient rune
+    "Sunken A1 - Star Piece":                       AdvData(118835, "Sunken Island"), # ancient rune
+    "Sunken B0 - Star Piece":                       AdvData(118910, "Sunken Island"), # 21 stars, s quest
     "Sunken B1 - Big Bell Star Piece":              AdvData(99909112, "Ancient Isle"), # sunken big bell
 
-    "Aggro B1 - Star Piece":                        AdvData(122849, "Aggro Crag"), # 35 star, r quest
-    "Aggro A1 - Star Piece":                        AdvData(122918, "Aggro Crag"), # ancient rune
+    "Aggro A1 - Star Piece":                        AdvData(101083, "Aggro Crag"), # ancient rune
+    "Aggro B1 - Star Piece":                        AdvData(101276, "Aggro Crag"), # 35 star, r quest
     "Aggro A1 - Big Bell Star Piece":               AdvData(99910012, "Ancient Isle"), # aggro big bell
 
-    "Nunatak B0 - Star Piece":                      AdvData(123470, "Sea Nunatak"), # 49 stars, d quest
-    "Nunatak A0 - Star Piece":                      AdvData(123384, "Sea Nunatak"), # ancient rune
+    "Nunatak A0 - Star Piece":                      AdvData(111200, "Sea Nunatak"), # ancient rune
+    "Nunatak B0 - Star Piece":                      AdvData(111353, "Sea Nunatak"), # 49 stars, d quest
     "Nunatak A1 - Big Bell Star Piece":             AdvData(99911012, "Ancient Isle"), # nunatak big bell
 
-    "Lost B1 - Star Piece":                         AdvData(128962, "Lost Landing"),
+    "Lost B1 - Star Piece":                         AdvData(111146, "Lost Landing"),
 
-    "Shoal A0 - Star Piece":                        AdvData(104392, "Shoal"), # f flippers
+    "Shoal A0 - Star Piece":                        AdvData(113762, "Shoal"), # f flippers
 
-    "Tropic A0 - Star Piece":                       AdvData(103229, "Star Tropic"), #
-    "Tropic B0 - S - Star Piece":                   AdvData(104244, "Star Tropic"), # a rune
-    "Tropic B0 - N - Star Piece":                   AdvData(104248, "Star Tropic"), # o rune, s shirt
-    "Tropic A1 - 1 - Star Piece":                   AdvData(104447, "Star Tropic"), # g gloves
-    "Tropic A1 - 2 - Star Piece":                   AdvData(104448, "Star Tropic"), # g gloves, s shirt,
-    "Tropic A1 - 3 - Star Piece":                   AdvData(104449, "Star Tropic"), # g gloves, s shirt, f flippers
-    "Tropic A1 - 4 - Star Piece":                   AdvData(104440, "Star Tropic"), # g gloves, s shirt, f flippers, k cloak
+    "Tropic A0 - Star Piece":                       AdvData(119691, "Star Tropic"), #
+    "Tropic A1 - 4 - Star Piece":                   AdvData(119785, "Star Tropic"), # g gloves, s shirt, f flippers, k cloak
+    "Tropic A1 - 1 - Star Piece":                   AdvData(119792, "Star Tropic"), # g gloves
+    "Tropic A1 - 2 - Star Piece":                   AdvData(119793, "Star Tropic"), # g gloves, s shirt,
+    "Tropic A1 - 3 - Star Piece":                   AdvData(119794, "Star Tropic"), # g gloves, s shirt, f flippers
+    "Tropic B0 - S - Star Piece":                   AdvData(119841, "Star Tropic"), # a rune
+    "Tropic B0 - N - Star Piece":                   AdvData(119845, "Star Tropic"), # o rune, s shirt
 
-    "Serpent A3 - Star Piece":                      AdvData(103356, "Serpent Stacks"), # k cloak
-    "Serpent A2 - Star Piece":                      AdvData(104825, "Serpent Stacks"), # k cloak, s circlet
-    "Serpent A1 - W - Star Piece":                  AdvData(125692, "Serpent Stacks Post-Rune"), # k cloak, s circlet
-    "Serpent A1 - N - Star Piece":                  AdvData(125709, "Serpent Stacks Post-Rune"), # k cloak, s circlet
-    "Serpent A4 - Star Piece":                      AdvData(125783, "Serpent Stacks Post-Rune"), # s circlet, t quest
-    "Serpent A6 - W - Star Piece":                  AdvData(126797, "Serpent Stacks Post-Rune"), # s quest, s circlet
-    "Serpent A6 - E - Star Piece":                  AdvData(126808, "Serpent Stacks Post-Rune"), # s quest, s circlet
-    "Serpent A7 - W - Star Piece":                  AdvData(126986, "Serpent Stacks Post-Rune"), # s circlet, r quest
-    "Serpent A7 - E - Star Piece":                  AdvData(126966, "Serpent Stacks Post-Rune"), # s circlet, r quest
-    "Serpent A8 - N - Star Piece":                  AdvData(127075, "Serpent Stacks Post-Rune"), # s circlet, d quest
-    "Serpent A8 - S - Star Piece":                  AdvData(127070, "Serpent Stacks Post-Rune"), # s circlet, d quest
+    "Serpent A1 - W - Star Piece":                  AdvData(112721, "Serpent Stacks Post-Rune"), # k cloak, o quest
+    "Serpent A1 - N - Star Piece":                  AdvData(112738, "Serpent Stacks Post-Rune"), # k cloak, o quest
+    "Serpent A2 - Star Piece":                      AdvData(112830, "Serpent Stacks"), # k cloak, o quest
+    "Serpent A3 - Star Piece":                      AdvData(112952, "Serpent Stacks"), # k cloak
+    "Serpent A4 - NW - Star Piece":                 AdvData(113038, "Serpent Stacks Post-Rune"), # o quest, t quest
+    "Serpent A4 - N - Star Piece":                  AdvData(113056, "Serpent Stacks Post-Rune"), # o quest, t quest
+    "Serpent A6 - W - Star Piece":                  AdvData(113363, "Serpent Stacks Post-Rune"), # s quest, o quest
+    "Serpent A6 - E - Star Piece":                  AdvData(113374, "Serpent Stacks Post-Rune"), # s quest, o quest
+    "Serpent A7 - E - Star Piece":                  AdvData(113464, "Serpent Stacks Post-Rune"), # o quest, r quest
+    "Serpent A7 - W - Star Piece":                  AdvData(113484, "Serpent Stacks Post-Rune"), # o quest, r quest
+    "Serpent A8 - S - Star Piece":                  AdvData(113580, "Serpent Stacks Post-Rune"), # o quest, d quest
+    "Serpent A8 - N - Star Piece":                  AdvData(113585, "Serpent Stacks Post-Rune"), # o quest, d quest
 
-    "Locked A0 - Star Piece":                       AdvData(104281, "Locked"),
+    "Locked A0 - Star Piece":                       AdvData(110759, "Locked"),
 
     # In the future, could include milestones as locations. e.g. each of the steam achievements, plus extras.
+}
+
+circlet_table = { # TODO implement and add logic for these
+    "Serpent A4 - Serpent Lock Shard":              AdvData(113044, "Serpent Stacks Post-Rune"),
+    "Serpent A5 - NE - Serpent Lock Shard":         AdvData(113263, "Serpent Stacks Post-Rune"),
+    "Serpent A5 - SE - Serpent Lock Shard":         AdvData(113264, "Serpent Stacks Post-Rune"),
+    "Serpent A5 - NW - Serpent Lock Shard":         AdvData(113265, "Serpent Stacks Post-Rune"),
+    "Serpent A5 - SW - Serpent Lock Shard":         AdvData(113266, "Serpent Stacks Post-Rune"),
+    "Serpent A6 - Serpent Lock Shard":              AdvData(113382, "Serpent Stacks Post-Rune"),
+    "Serpent A7 - Serpent Lock Shard":              AdvData(113471, "Serpent Stacks Post-Rune"),
+    "Serpent A8 - Serpent Lock Shard":              AdvData(113597, "Serpent Stacks Post-Rune"),
+    "Serpent A5 - Serpent Lock Shard":              AdvData(113597, "Serpent Stacks Post-Rune"),
+    "Serpent A5 - Serpent Circlet":                 AdvData(999999, "Serpent Stacks Post-Rune"),
+    "Fire D3 - Obsidian":                           AdvData(107304, "Raging Volcano Post-Rune"),  # Serpent Circlet
 }
 
 seashell_table = {
@@ -403,33 +435,33 @@ jellyfish_table = {
 
 notesanity_table = {
     # 24 checks
-    "Stone C1 - Music Note":                        AdvData(107494, "Stony Cliffs"), #
-    "Stone D4 - Music Note":                        AdvData(106797, "Stony Cliffs Post-Rune"), # topaz rune
-    "Stone B3 - Music Note":                        AdvData(108112, "Stony Cliffs Post-Rune"), # topaz rune
-    "Stone B0 - Music Note":                        AdvData(108015, "Stony Cliffs NW"), # topaz rune
-    "Stone B2 - Music Note":                        AdvData(107378, "Stony Cliffs Post-Rune"), # topaz quest
-    "Stone D1 - Music Note":                        AdvData(107170, "Stony Cliffs"), # topaz quest
+    "Stone B0 - Music Note":                        AdvData(114766, "Stony Cliffs NW"), # topaz rune
+    "Stone B2 - Music Note":                        AdvData(114963, "Stony Cliffs Post-Rune"), # topaz quest
+    "Stone B3 - Music Note":                        AdvData(115016, "Stony Cliffs Post-Rune"), # topaz rune
+    "Stone C1 - Music Note":                        AdvData(115213, "Stony Cliffs"), #
+    "Stone D1 - Music Note":                        AdvData(115710, "Stony Cliffs"), # topaz quest
+    "Stone D4 - Music Note":                        AdvData(116023, "Stony Cliffs Post-Rune"), # topaz rune
 
-    "Water C1 - Music Note":                        AdvData(109459, "Tidal Reef"),
-    "Water E0 - Music Note":                        AdvData(110707, "Tidal Reef Post-Rune"), # s rune
-    "Water D1 - Music Note":                        AdvData(109898, "Tidal Reef Post-Rune"), # s rune
-    "Water E2 - Music Note":                        AdvData(113309, "Tidal Reef Post-Rune"), # s rune
-    "Water B0 - Music Note":                        AdvData(113769, "Tidal Reef Post-Rune"), # s rune
-    "Water A2 - Music Note":                        AdvData(112459, "Tidal Reef Post-Rune"), # s rune
+    "Water A2 - Music Note":                        AdvData(121523, "Tidal Reef Post-Rune"), # s rune
+    "Water B0 - Music Note":                        AdvData(122052, "Tidal Reef Post-Rune"), # s rune
+    "Water C1 - Music Note":                        AdvData(123055, "Tidal Reef"),
+    "Water D1 - Music Note":                        AdvData(124075, "Tidal Reef Post-Rune"), # s rune
+    "Water E0 - Music Note":                        AdvData(126473, "Tidal Reef Post-Rune"), # s rune
+    "Water E2 - Music Note":                        AdvData(126809, "Tidal Reef Post-Rune"), # s rune
 
-    "Fire A2 - Music Note":                         AdvData(115241, "Raging Volcano"),
-    "Fire C3 - Music Note":                         AdvData(116308, "Raging Volcano Post-Rune"), # r rune
-    "Fire B0 - Music Note":                         AdvData(119349, "Raging Volcano Post-Rune"), # r rune
-    "Fire B2 - Music Note":                         AdvData(115377, "Raging Volcano Post-Rune"), # r rune
-    "Fire E1 - Music Note":                         AdvData(118593, "Raging Volcano Post-Rune"), # r rune
-    "Fire D3 - Music Note":                         AdvData(119009, "Raging Volcano Post-Rune"), # r rune
+    "Fire A2 - Music Note":                         AdvData(104377, "Raging Volcano"),
+    "Fire B0 - Music Note":                         AdvData(104915, "Raging Volcano Post-Rune"), # r rune
+    "Fire B2 - Music Note":                         AdvData(105168, "Raging Volcano Post-Rune"), # r rune
+    "Fire C3 - Music Note":                         AdvData(106407, "Raging Volcano Post-Rune"), # r rune
+    "Fire D3 - Music Note":                         AdvData(107310, "Raging Volcano Post-Rune"), # r rune
+    "Fire E1 - Music Note":                         AdvData(107708, "Raging Volcano Post-Rune"), # r rune
 
-    "Wind B1 - Music Note":                         AdvData(120922, "Frozen Spire"),
-    "Wind A0 - Music Note":                         AdvData(120222, "Frozen Spire"),
-    "Wind E3 - Music Note":                         AdvData(121759, "Frozen Spire Post-Rune"),  # d rune
-    "Wind C3 - Music Note":                         AdvData(120640, "Frozen Spire Post-Rune"),  # d rune,
-    "Wind A2 - Music Note":                         AdvData(120737, "Frozen Spire Post-Rune"), # d quest,
-    "Wind D3 - Music Note":                         AdvData(120557, "Frozen Spire Post-Rune"), # d quest
+    "Wind A0 - Music Note":                         AdvData(128533, "Frozen Spire"),
+    "Wind A2 - Music Note":                         AdvData(128657, "Frozen Spire Post-Rune"), # d quest,
+    "Wind B1 - Music Note":                         AdvData(128904, "Frozen Spire"),
+    "Wind C3 - Music Note":                         AdvData(129595, "Frozen Spire Post-Rune"),  # d rune,
+    "Wind D3 - Music Note":                         AdvData(130173, "Frozen Spire Post-Rune"), # d quest
+    "Wind E3 - Music Note":                         AdvData(130832, "Frozen Spire Post-Rune"),  # d rune
 }
 
 # 24 checks
@@ -797,14 +829,14 @@ snakesanity_table = {
     "Wind C2 - Snakeblock":                         AdvData(121370, "Frozen Spire"), # d quest
 
     "Serpent A1 - W - Snakeblock":                  AdvData(125712, "Serpent Stacks Post-Rune"),
-    "Serpent A1 - C - Snakeblock":                  AdvData(125704, "Serpent Stacks Post-Rune"), #s circlet
-    "Serpent A1 - CE - Snakeblock":                 AdvData(125690, "Serpent Stacks Post-Rune"), #s circlet
-    "Serpent A1 - E - Snakeblock":                  AdvData(125711, "Serpent Stacks Post-Rune"), #s circlet
-    "Serpent A6 - SW - Snakeblock":                 AdvData(126815, "Serpent Stacks Post-Rune"), #s circlet, S quest, T quest
-    "Serpent A6 - NW - Snakeblock":                 AdvData(126807, "Serpent Stacks Post-Rune"), #s circlet, S quest, T quest
-    "Serpent A6 - C - Snakeblock":                  AdvData(126804, "Serpent Stacks Post-Rune"), #s circlet, S quest, T quest
-    "Serpent A6 - E - Snakeblock":                  AdvData(126805, "Serpent Stacks Post-Rune"), #s circlet, S quest, T quest
-    "Serpent A8 - Snakeblock":                      AdvData(127076, "Serpent Stacks Post-Rune"), #s circlet, all quests
+    "Serpent A1 - C - Snakeblock":                  AdvData(125704, "Serpent Stacks Post-Rune"), #o quest
+    "Serpent A1 - CE - Snakeblock":                 AdvData(125690, "Serpent Stacks Post-Rune"), #o quest
+    "Serpent A1 - E - Snakeblock":                  AdvData(125711, "Serpent Stacks Post-Rune"), #o quest
+    "Serpent A6 - SW - Snakeblock":                 AdvData(126815, "Serpent Stacks Post-Rune"), #o quest, S quest, T quest
+    "Serpent A6 - NW - Snakeblock":                 AdvData(126807, "Serpent Stacks Post-Rune"), #o quest, S quest, T quest
+    "Serpent A6 - C - Snakeblock":                  AdvData(126804, "Serpent Stacks Post-Rune"), #o quest, S quest, T quest
+    "Serpent A6 - E - Snakeblock":                  AdvData(126805, "Serpent Stacks Post-Rune"), #o quest, S quest, T quest
+    "Serpent A8 - Snakeblock":                      AdvData(127076, "Serpent Stacks Post-Rune"), #o quest, all quests
 
     "Sanctum A2 - S - Snakeblock":                  AdvData(123858, "Sanctum"), #all quests
     "Sanctum A2 - C - Snakeblock":                  AdvData(123857, "Sanctum"), #all quests

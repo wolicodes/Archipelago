@@ -10,7 +10,7 @@
 
 ### Connect to the Multiworld
 
-Make sure both vanilla Isles Of Sea And Sky (v1.2b), and Archipelago are installed.
+Make sure both vanilla Isles Of Sea And Sky (v2.6), and Archipelago are installed.
 If they are, open up the Isles Of Sea And Sky Client. 
 
 In the top text box of the client, type the `IP Address` (or `Hostname`) and `Port` separated with a `:` symbol. 

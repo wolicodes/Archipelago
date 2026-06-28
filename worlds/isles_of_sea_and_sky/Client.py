@@ -200,7 +200,7 @@ class IslesOfSeaAndSkyContext(CommonContext):
             # TODO: consider clearing the path since the one we were given is invalid
             return False
         except ValueError:
-            logger.info("Selected game is not the correct version, or it is otherwise altered, please reset game to vanilla v1.2b")
+            logger.info("Selected game is not the correct version, or it is otherwise altered, please reset game to vanilla v2.6")
             # TODO: consider clearing the path since the one we were given is invalid
             return False
 
