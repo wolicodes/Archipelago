@@ -1,21 +1,19 @@
 from dataclasses import dataclass
 
-from Options import Choice, OptionGroup, PerGameCommonOptions, Range, Toggle, DefaultOnToggle
+from Options import Choice, OptionGroup, OptionSet, PerGameCommonOptions, Range, Toggle, DefaultOnToggle
 
 
-class Goal(Choice):
+class Goal(OptionSet):
     """
-    reach_bonnie_room: Reach Bonnie's room
-    complete_bonnie: Reach Bonnie's room after collecting all 15 Bonnie's bones
-    map_clear: Reach Bonnie's room after completing all the zones
+    The goal is generally to reach Bonnie's room, those are extra conditions you can stack on top of it.
+
+    complete_bonnie: Need to collect all 15 Bonnie's bones
+    map_clear: Need complete all the stages
     """
     display_name = "Goal"
 
-    option_reach_bonnie_room = 0
-    option_complete_bonnie = 1
-    option_map_clear = 2
-
-    default = option_reach_bonnie_room
+    valid_keys = {"complete_bonnie", "map_clear"}
+    default = frozenset()
 
 
 class ShuffleBonniesBones(DefaultOnToggle):

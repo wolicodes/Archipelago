@@ -43,7 +43,7 @@ def get_random_filler_item_name(world: DesveladoWorld) -> str:
 def create_item_with_correct_classification(world: DesveladoWorld, name: str) -> DesveladoItem:
     classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
 
-    if name == "Bonnie's Bone" and world.options.goal.current_key == "complete_bonnie":
+    if name == "Bonnie's Bone" and "complete_bonnie" in world.options.goal.value:
         classification = ItemClassification.progression_deprioritized_skip_balancing
 
     return DesveladoItem(name, classification, ITEM_NAME_TO_ID[name], world.player)

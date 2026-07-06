@@ -37,7 +37,6 @@ def set_all_entrance_rules(world: DesveladoWorld) -> None:
     zone3_3_double_keys = world.get_entrance("3-3 room 4-12 -> 3-3 room 13-end")
 
     victory = world.get_entrance("Run 3 -> Bonnie Room")
-    victory_rules = HAS_DASH_WALLS & HAS_GLASS_TORCHES & HAS_DOUBLE_KEYS
 
     world.set_rule(zone2_2_single_keys, HAS_SINGLE_KEYS)
     world.set_rule(zone2_2_laser_eyes, HAS_LASER_EYES)
@@ -55,11 +54,12 @@ def set_all_entrance_rules(world: DesveladoWorld) -> None:
     world.set_rule(zone3_3_eyes_walls, HAS_LASER_EYES & HAS_DASH_WALLS)
     world.set_rule(zone3_3_double_keys, HAS_DOUBLE_KEYS)
 
-    if world.options.goal.current_key == "complete_bonnie":
-        world.set_rule(victory, victory_rules & HasAll("Bonnie's Bone"))
-    elif world.options.goal.current_key == "map_clear":
-        world.set_rule(victory, victory_rules
-            & Has("Zone 1-1 Won")
+    goals = world.options.goal.value
+    victory_rule = HAS_DASH_WALLS & HAS_GLASS_TORCHES & HAS_DOUBLE_KEYS
+    if "complete_bonnie" in goals:
+        victory_rule &= HasAll("Bonnie's Bone")
+    if "map_clear" in goals:
+        victory_rule &= (Has("Zone 1-1 Won")
             & Has("Zone 1-2 Won")
             & Has("Run 1 Won")
             & Has("Zone 2-1 Won")
@@ -69,8 +69,7 @@ def set_all_entrance_rules(world: DesveladoWorld) -> None:
             & Has("Zone 3-1 Won")
             & Has("Zone 3-2 Won")
             & Has("Zone 3-3 Won"))
-    else:
-        world.set_rule(victory, victory_rules)
+    world.set_rule(victory, victory_rule)
 
 
 def set_completion_condition(world: DesveladoWorld) -> None:
