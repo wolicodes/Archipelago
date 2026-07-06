@@ -23,6 +23,22 @@ class DesveladoWorld(World):
 
     origin_region_name = "Map Screen"
 
+    ut_can_gen_without_yaml = True
+
+    # UT
+    def generate_early(self) -> None:
+        passthrough = getattr(self.multiworld, "re_gen_passthrough", {}).get(self.game)
+        if not passthrough:
+            return
+        options = self.options
+        options.goal = options.goal.from_any(passthrough["goal"])
+        options.shuffle_bonnies_bones = options.shuffle_bonnies_bones.from_any(passthrough["shuffle_bonnies_bones"])
+
+    # UT
+    @staticmethod
+    def interpret_slot_data(slot_data: dict[str, Any]) -> dict[str, Any]:
+        return slot_data
+
     # Our world class must have certain functions ("steps") that get called during generation.
     # The main ones are: create_regions, set_rules, create_items.
     # For better structure and readability, we put each of these in their own file.
