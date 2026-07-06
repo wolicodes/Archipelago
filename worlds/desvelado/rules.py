@@ -71,6 +71,21 @@ def set_all_entrance_rules(world: DesveladoWorld) -> None:
             & Has("Zone 3-3 Won"))
     world.set_rule(victory, victory_rule)
 
+def set_all_location_rules(world: DesveladoWorld) -> None:
+    stage2_2_room9_bonus = world.get_location("2-2 Room 9 Bonus")
+    stage2_3_room2_bonus = world.get_location("2-3 Room 2 Bonus")
+    stage3_2_room8_bonus = world.get_location("3-2 Room 8 Bonus")
+    stage3_3_room4_bonus = world.get_location("3-3 Room 4 Bonus")
+    stage3_3_room8_bonus = world.get_location("3-3 Room 8 Bonus")
+    run_2_map = world.get_location("Run 2 Map")
+    
+    world.set_rule(stage2_2_room9_bonus, HAS_DOUBLE_KEYS)
+    world.set_rule(stage2_3_room2_bonus, HAS_SINGLE_KEYS)
+    world.set_rule(stage3_2_room8_bonus, HAS_SINGLE_KEYS)
+    world.set_rule(stage3_3_room4_bonus, HAS_DOUBLE_KEYS)
+    world.set_rule(stage3_3_room8_bonus, HAS_DOUBLE_KEYS)
+    world.set_rule(run_2_map, HAS_SINGLE_KEYS & HAS_LASER_EYES)
+
 
 def set_completion_condition(world: DesveladoWorld) -> None:
     world.set_completion_rule(Has("Victory"))
