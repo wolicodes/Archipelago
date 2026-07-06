@@ -65,14 +65,14 @@ def create_all_items(world: DesveladoWorld) -> None:
             )
     else:
         bonus_locations = [
-            "1-1 Room 9 Bonus", "1-1 Room 19 Bonus", "1-1 Room 22 Bonus",
-            "1-2 Room 5 Bonus", "1-2 Room 12 Bonus",
-            "2-1 Room 8 Bonus",
-            "2-2 Room 9 Bonus", "2-2 Room 14 Bonus",
-            "2-3 Room 2 Bonus", "2-3 Room 12 Bonus",
+            "1-1 Room 09 Bonus", "1-1 Room 19 Bonus", "1-1 Room 22 Bonus",
+            "1-2 Room 05 Bonus", "1-2 Room 12 Bonus",
+            "2-1 Room 08 Bonus",
+            "2-2 Room 09 Bonus", "2-2 Room 14 Bonus",
+            "2-3 Room 02 Bonus", "2-3 Room 12 Bonus",
             "3-1 Room 16 Bonus",
-            "3-2 Room 8 Bonus", "3-2 Room 11 Bonus",
-            "3-3 Room 4 Bonus", "3-3 Room 8 Bonus",
+            "3-2 Room 08 Bonus", "3-2 Room 11 Bonus",
+            "3-3 Room 04 Bonus", "3-3 Room 08 Bonus",
         ]
         for location_name in bonus_locations:
             world.get_location(location_name).place_locked_item(world.create_item("Bonnie's Bone"))
