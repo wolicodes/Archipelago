@@ -67,31 +67,43 @@ def create_regular_locations(world: DesveladoWorld) -> None:
     run_2 = world.get_region("Run 2")
 
     zone1_1.add_locations(get_location_names_with_ids(
-        ["Zone 1-1 Map"]
+        ["Zone 1-1 Map", "1-1 Room 9 Bonus", "1-1 Room 19 Bonus", "1-1 Room 22 Bonus"]
     ), DesveladoLocation)
 
     zone1_2.add_locations(get_location_names_with_ids(
-        ["Zone 1-2 Map"]
+        ["Zone 1-2 Map", "1-2 Room 5 Bonus", "1-2 Room 12 Bonus"]
     ), DesveladoLocation)
 
     zone2_1.add_locations(get_location_names_with_ids(
-        ["Zone 2-1 Map"]
+        ["Zone 2-1 Map", "2-1 Room 8 Bonus"]
+    ), DesveladoLocation)
+
+    zone2_2_room3_13.add_locations(get_location_names_with_ids(
+        ["2-2 Room 9 Bonus"]
     ), DesveladoLocation)
 
     zone2_2_room14_end.add_locations(get_location_names_with_ids(
-        ["Zone 2-2 Map"]
+        ["Zone 2-2 Map", "2-2 Room 14 Bonus"]
+    ), DesveladoLocation)
+
+    zone2_3_room1_2.add_locations(get_location_names_with_ids(
+        ["2-3 Room 2 Bonus"]
     ), DesveladoLocation)
 
     zone2_3_room5_end.add_locations(get_location_names_with_ids(
-        ["Zone 2-3 Map"]
+        ["Zone 2-3 Map", "2-3 Room 12 Bonus"]
     ), DesveladoLocation)
 
     zone3_1_room13_end.add_locations(get_location_names_with_ids(
-        ["Zone 3-1 Map"]
+        ["Zone 3-1 Map", "3-1 Room 16 Bonus"]
     ), DesveladoLocation)
 
     zone3_2_room6_end.add_locations(get_location_names_with_ids(
-        ["Zone 3-2 Map"]
+        ["Zone 3-2 Map", "3-2 Room 8 Bonus", "3-2 Room 11 Bonus"]
+    ), DesveladoLocation)
+
+    zone3_3_room4_12.add_locations(get_location_names_with_ids(
+        ["3-3 Room 4 Bonus", "3-3 Room 8 Bonus"]
     ), DesveladoLocation)
 
     zone3_3_room13_end.add_locations(get_location_names_with_ids(
@@ -105,38 +117,6 @@ def create_regular_locations(world: DesveladoWorld) -> None:
     run_2.add_locations(get_location_names_with_ids(
         ["Run 2 Map"]
     ), DesveladoLocation)
-
-    if world.options.shuffle_bonnies_bones:
-        zone1_1.add_locations(get_location_names_with_ids(
-            ["1-1 Room 9 Bonus", "1-1 Room 19 Bonus", "1-1 Room 22 Bonus"]
-        ), DesveladoLocation)
-        zone1_2.add_locations(get_location_names_with_ids(
-            ["1-2 Room 5 Bonus", "1-2 Room 12 Bonus"]
-        ), DesveladoLocation)
-        zone2_1.add_locations(get_location_names_with_ids(
-            ["2-1 Room 8 Bonus"]
-        ), DesveladoLocation)
-        zone2_2_room3_13.add_locations(get_location_names_with_ids(
-            ["2-2 Room 9 Bonus"]
-        ), DesveladoLocation)
-        zone2_2_room14_end.add_locations(get_location_names_with_ids(
-            ["2-2 Room 14 Bonus"]
-        ), DesveladoLocation)
-        zone2_3_room1_2.add_locations(get_location_names_with_ids(
-            ["2-3 Room 2 Bonus"]
-        ), DesveladoLocation)
-        zone2_3_room5_end.add_locations(get_location_names_with_ids(
-            ["2-3 Room 12 Bonus"]
-        ), DesveladoLocation)
-        zone3_1_room13_end.add_locations(get_location_names_with_ids(
-            ["3-1 Room 16 Bonus"]
-        ), DesveladoLocation)
-        zone3_2_room6_end.add_locations(get_location_names_with_ids(
-            ["3-2 Room 8 Bonus", "3-2 Room 11 Bonus"]
-        ), DesveladoLocation)
-        zone3_3_room4_12.add_locations(get_location_names_with_ids(
-            ["3-3 Room 4 Bonus", "3-3 Room 8 Bonus"]
-        ), DesveladoLocation)
 
 
 def create_events(world: DesveladoWorld) -> None:
