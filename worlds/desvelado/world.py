@@ -31,8 +31,8 @@ class DesveladoWorld(World):
         if not passthrough:
             return
         options = self.options
-        options.goal = options.goal.from_any(passthrough["goal"])
-        options.shuffle_bonnies_bones = options.shuffle_bonnies_bones.from_any(passthrough["shuffle_bonnies_bones"])
+        options.goal.value = passthrough["goal"]
+        options.shuffle_bonnies_bones.value = passthrough["shuffle_bonnies_bones"]
 
     # UT
     @staticmethod

@@ -58,10 +58,24 @@ def create_all_items(world: DesveladoWorld) -> None:
         world.create_item("Glass Torches"),
     ]
 
-    for i in range(15):
-        itempool.append(
-            world.create_item("Bonnie's Bone")
-        )
+    if world.options.shuffle_bonnies_bones:
+        for i in range(15):
+            itempool.append(
+                world.create_item("Bonnie's Bone")
+            )
+    else:
+        bonus_locations = [
+            "1-1 Room 9 Bonus", "1-1 Room 19 Bonus", "1-1 Room 22 Bonus",
+            "1-2 Room 5 Bonus", "1-2 Room 12 Bonus",
+            "2-1 Room 8 Bonus",
+            "2-2 Room 9 Bonus", "2-2 Room 14 Bonus",
+            "2-3 Room 2 Bonus", "2-3 Room 12 Bonus",
+            "3-1 Room 16 Bonus",
+            "3-2 Room 8 Bonus", "3-2 Room 11 Bonus",
+            "3-3 Room 4 Bonus", "3-3 Room 8 Bonus",
+        ]
+        for location_name in bonus_locations:
+            world.get_location(location_name).place_locked_item(world.create_item("Bonnie's Bone"))
 
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
