@@ -10,8 +10,8 @@ if TYPE_CHECKING:
 ITEM_NAME_TO_ID = {
     "Single Keys": 1,
     "Double Keys": 2,
-    "Laser Eyes": 3,
-    "Dash Walls": 4,
+    "Ghost Switches": 3,
+    "Ghost Walls": 4,
     "Glass Torches": 5,
     "Bonnie's Bone": 6,
     "Meow": 7,
@@ -21,8 +21,8 @@ ITEM_NAME_TO_ID = {
 DEFAULT_ITEM_CLASSIFICATIONS = {
     "Single Keys": ItemClassification.progression | ItemClassification.useful,
     "Double Keys": ItemClassification.progression | ItemClassification.useful,
-    "Laser Eyes": ItemClassification.progression | ItemClassification.useful,
-    "Dash Walls": ItemClassification.progression | ItemClassification.useful,
+    "Ghost Switches": ItemClassification.progression | ItemClassification.useful,
+    "Ghost Walls": ItemClassification.progression | ItemClassification.useful,
     "Glass Torches": ItemClassification.progression | ItemClassification.useful,
     "Bonnie's Bone": ItemClassification.filler,
     "Meow": ItemClassification.filler,
@@ -53,8 +53,8 @@ def create_all_items(world: DesveladoWorld) -> None:
     itempool: list[Item] = [
         world.create_item("Single Keys"),
         world.create_item("Double Keys"),
-        world.create_item("Laser Eyes"),
-        world.create_item("Dash Walls"),
+        world.create_item("Ghost Switches"),
+        world.create_item("Ghost Walls"),
         world.create_item("Glass Torches"),
     ]
 
