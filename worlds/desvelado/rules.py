@@ -16,6 +16,7 @@ HAS_GLASS_TORCHES = Has("Glass Torches")
 
 def set_all_rules(world: DesveladoWorld) -> None:
     set_all_entrance_rules(world)
+    set_all_location_rules(world)
     set_completion_condition(world)
 
 
@@ -57,7 +58,7 @@ def set_all_entrance_rules(world: DesveladoWorld) -> None:
     goals = world.options.goal.value
     victory_rule = HAS_GHOST_WALLS & HAS_GLASS_TORCHES & HAS_DOUBLE_KEYS
     if "complete_bonnie" in goals:
-        victory_rule &= HasAll("Bonnie's Bone")
+        victory_rule &= Has("Bonnie's Bone", 15)
     if "map_clear" in goals:
         victory_rule &= (Has("1-1 Won")
             & Has("1-2 Won")
