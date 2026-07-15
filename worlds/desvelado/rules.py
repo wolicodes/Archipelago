@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from rule_builder.rules import Has, HasAll
+from rule_builder.rules import Has
 
 if TYPE_CHECKING:
     from .world import DesveladoWorld
@@ -80,7 +80,7 @@ def set_all_location_rules(world: DesveladoWorld) -> None:
     stage3_3_room4_bonus = world.get_location("3-3 Room 04 Bonus")
     stage3_3_room8_bonus = world.get_location("3-3 Room 08 Bonus")
     run_2_map = world.get_location("Boss Level 2 Map")
-    
+
     world.set_rule(stage2_2_room9_bonus, HAS_DOUBLE_KEYS)
     world.set_rule(stage2_3_room2_bonus, HAS_SINGLE_KEYS)
     world.set_rule(stage3_2_room8_bonus, HAS_SINGLE_KEYS)

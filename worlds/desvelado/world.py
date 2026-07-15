@@ -1,16 +1,19 @@
 from collections.abc import Mapping
 from typing import Any
 
+from Options import Option
+
 # Imports of base Archipelago modules must be absolute.
 from worlds.AutoWorld import World
 
-# Imports of your world's files must be relative.
+# Imports of the world's files must be relative.
 from . import items, locations, regions, rules, web_world
 from . import options as desvelado_options  # rename due to a name conflict with World.options
 
+
 class DesveladoWorld(World):
     """
-    Desvelado is a short and cute puzzle-platformer developed by Vampi Team.
+    Desvelado is a short and cute platformer developed by Vampi Team.
     """
     game = "Desvelado"
     web = web_world.DesveladoWebWorld()
@@ -27,12 +30,18 @@ class DesveladoWorld(World):
 
     # UT
     def generate_early(self) -> None:
-        passthrough = getattr(self.multiworld, "re_gen_passthrough", {}).get(self.game)
-        if not passthrough:
-            return
-        options = self.options
-        options.goal.value = passthrough["goal"]
-        options.shuffle_bonnies_bones.value = passthrough["shuffle_bonnies_bones"]
+        re_gen_passthrough = getattr(self.multiworld, "re_gen_passthrough", {})
+        if re_gen_passthrough and self.game in re_gen_passthrough:
+            # Get the passed through slot data from the real generation
+            slot_data: dict[str, Any] = re_gen_passthrough[self.game]
+            slot_options: dict[str, Any] = slot_data.get("options", {})
+
+            # Set all the options here instead of getting them from the YAML
+            for key, value in slot_options.items():
+                opt: Option | None = getattr(self.options, key, None)
+                if opt is not None:
+                    # You can also set .value directly but that won't work if you have OptionSets
+                    setattr(self.options, key, opt.from_any(value))
 
     # UT
     @staticmethod
@@ -59,6 +68,6 @@ class DesveladoWorld(World):
         return items.get_random_filler_item_name(self)
 
     def fill_slot_data(self) -> Mapping[str, Any]:
-        return self.options.as_dict(
-            "goal", "shuffle_bonnies_bones"
-        )
+        return {
+            "options": self.options.as_dict("goal", "shuffle_bonnies_bones"),
+        }
