@@ -184,6 +184,7 @@ class IslesOfSeaAndSkyWorld(World):
         # options.include_jellyfish = passthrough["include_jellyfish"]
         options.serpent_puzzle_memorization = passthrough["serpent_puzzle_memorization"]
         options.warps_in_logic = passthrough["warps_in_logic"]
+        options.phoenix_anywhere = passthrough["phoenix_anywhere"]
 
     # UT
     @staticmethod
